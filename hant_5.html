@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5-я ступень Ханта — Покупка</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FDF8F9;
+            color: #1F1A1C;
+            padding: 40px 20px;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 16px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(240, 180, 41, 0.06);
+            border: 1px solid #f0e2d5;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #FDF8F0;
+            color: #1F1A1C;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover {
+            background: #F0B429;
+            color: #fff;
+            border-color: #F0B429;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(240, 180, 41, 0.3);
+        }
+
+        .nav-links a.active {
+            background: #F0B429;
+            color: #fff;
+            border-color: #F0B429;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links a {
+                font-size: 0.75rem;
+                padding: 6px 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links a {
+                font-size: 0.7rem;
+                padding: 4px 12px;
+            }
+        }
+
+        /* ===== ШАПКА ===== */
+        .hero {
+            background: linear-gradient(135deg, #fdf8f0, #f8f0e8, #fdf5ed);
+            border-radius: 24px;
+            padding: 48px 40px 40px;
+            margin-bottom: 40px;
+            border: 2px solid #f0e2d5;
+            box-shadow: 0 8px 30px rgba(240, 180, 41, 0.08);
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #F0B429;
+            color: #1F1A1C;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 4px 18px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            color: #1F1A1C;
+        }
+
+        .hero h1 .highlight {
+            color: #F0B429;
+        }
+
+        .hero .subhead {
+            font-size: 1.15rem;
+            color: #5A4A50;
+            font-weight: 400;
+            margin-top: 8px;
+            max-width: 700px;
+        }
+
+        /* ===== ОБЩАЯ ИНФОРМАЦИЯ ===== */
+        .summary {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(240, 180, 41, 0.06);
+            border-left: 5px solid #F0B429;
+        }
+
+        .summary h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-bottom: 12px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+        }
+
+        .summary-item {
+            background: #FDF8F0;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 4px solid #F0B429;
+        }
+
+        .summary-item .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8A7A80;
+        }
+
+        .summary-item .value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-top: 2px;
+        }
+
+        /* ===== ПРИНЦИП ===== */
+        .principle-box {
+            background: linear-gradient(135deg, #fff, #fdf8f0);
+            border-radius: 18px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            border: 2px solid #F0B429;
+            box-shadow: 0 4px 20px rgba(240, 180, 41, 0.08);
+        }
+
+        .principle-box .emoji-big {
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .principle-box h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1F1A1C;
+        }
+
+        .principle-box h2 .highlight {
+            color: #F0B429;
+        }
+
+        .principle-box p {
+            color: #3D3035;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-top: 8px;
+        }
+
+        .principle-box .key-idea {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 14px;
+            border-left: 4px solid #F0B429;
+            font-style: italic;
+            color: #1F1A1C;
+            font-weight: 500;
+        }
+
+        /* ===== БЛОК АРХЕТИПОВ ===== */
+        .block {
+            margin-bottom: 50px;
+        }
+
+        .block-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 24px;
+            border-radius: 14px;
+            margin-bottom: 16px;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .block-title .emoji {
+            font-size: 1.6rem;
+        }
+
+        .block-title .count {
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 2px 14px;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+
+        .block.organizer .block-title {
+            background: linear-gradient(135deg, #7EC8E3, #4A9BB5);
+        }
+
+        .block.friend .block-title {
+            background: linear-gradient(135deg, #7BC8A4, #4A9B7A);
+        }
+
+        .block.leader .block-title {
+            background: linear-gradient(135deg, #F0B429, #D49A1A);
+        }
+
+        /* ===== ОПИСАНИЕ КАТЕГОРИИ ===== */
+        .category-desc {
+            background: #fff;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #F0B429;
+            color: #3D3035;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            box-shadow: 0 2px 12px rgba(240, 180, 41, 0.04);
+        }
+
+        .category-desc strong {
+            color: #1F1A1C;
+        }
+
+        /* ===== ТАБЛИЦА ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(240, 180, 41, 0.06);
+            margin-bottom: 10px;
+        }
+
+        thead tr {
+            background: #FDF8F0;
+            border-bottom: 2px solid #f0e2d5;
+        }
+
+        th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #1F1A1C;
+            letter-spacing: 0.02em;
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #f0e2d5;
+            vertical-align: top;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #fdf8f0;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .archetype-name {
+            font-weight: 700;
+            color: #1F1A1C;
+            width: 22%;
+            min-width: 160px;
+            font-size: 0.95rem;
+        }
+
+        .archetype-name .sub {
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: #8A7A80;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .hook-number {
+            background: #FDF8F0;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #8A7A80;
+            display: inline-block;
+            margin-right: 10px;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .hook-text {
+            color: #3D3035;
+            line-height: 1.6;
+            font-size: 0.92rem;
+        }
+
+        .hook-cell {
+            background: #faf8f0;
+        }
+
+        .hooks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .single-hook {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .hook-explanation {
+            font-size: 0.78rem;
+            color: #8A7A80;
+            padding-left: 36px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ===== ТЕМЫ ===== */
+        .themes-section {
+            background: white;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-top: 30px;
+            box-shadow: 0 4px 20px rgba(240, 180, 41, 0.06);
+            border: 2px solid #f0e2d5;
+        }
+
+        .themes-section h3 {
+            color: #1F1A1C;
+            font-size: 1.2rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .themes-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+        }
+
+        .theme-item {
+            background: #fdf8f0;
+            border-radius: 10px;
+            padding: 14px 16px;
+            border-left: 3px solid #F0B429;
+            transition: background 0.2s;
+        }
+
+        .theme-item:hover {
+            background: #fdf1e0;
+        }
+
+        .theme-item .t-num {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #F0B429;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .theme-item .t-title {
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: #1F1A1C;
+            margin: 3px 0 2px;
+        }
+
+        .theme-item .t-hook {
+            font-style: italic;
+            font-size: 0.82rem;
+            color: #3D3035;
+            background: #fff;
+            padding: 3px 12px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-top: 2px;
+        }
+
+        /* ===== ЗАПРЕТЫ ===== */
+        .forbidden-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .forbidden-item {
+            background: #fdf8f0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            border-left: 3px solid #e8836e;
+        }
+
+        .forbidden-item .f-icon {
+            font-weight: 700;
+            color: #e8836e;
+            margin-right: 8px;
+        }
+
+        .forbidden-item strong {
+            color: #1F1A1C;
+        }
+
+        .forbidden-item span {
+            color: #5A4A50;
+            font-size: 0.9rem;
+        }
+
+        /* ===== ФОРМАТЫ ===== */
+        .formats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 12px 0;
+        }
+
+        .format-item {
+            background: white;
+            border-radius: 10px;
+            padding: 12px 16px;
+            text-align: center;
+            border: 1px solid #f0e2d5;
+        }
+
+        .format-item .emoji {
+            font-size: 1.5rem;
+            display: block;
+        }
+
+        .format-item strong {
+            font-size: 0.85rem;
+            color: #1F1A1C;
+            display: block;
+            margin: 4px 0 2px;
+        }
+
+        .format-item span {
+            font-size: 0.75rem;
+            color: #8A7A80;
+        }
+
+        /* ===== ШПАРГАЛКА ===== */
+        .cheatsheet {
+            background: linear-gradient(135deg, #fdf8f0, #f8f0e0);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-top: 30px;
+            border: 2px solid #F0B429;
+        }
+
+        .cheatsheet h3 {
+            color: #1F1A1C;
+            font-size: 1.1rem;
+            margin-bottom: 14px;
+        }
+
+        .cheatsheet-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 14px;
+        }
+
+        .cheatsheet-item {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            padding: 12px 16px;
+        }
+
+        .cheatsheet-item .label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8A7A80;
+            font-weight: 600;
+        }
+
+        .cheatsheet-item .value {
+            font-weight: 600;
+            color: #1F1A1C;
+            font-size: 0.95rem;
+            margin-top: 2px;
+        }
+
+        /* ===== ПРИМЕРЫ ПОСТОВ ===== */
+        .example-post {
+            background: white;
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-top: 16px;
+            border: 1px solid #f0e2d5;
+        }
+
+        .example-post h4 {
+            color: #F0B429;
+            font-size: 1rem;
+            margin-bottom: 6px;
+        }
+
+        .example-post .post-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1F1A1C;
+            margin-bottom: 8px;
+        }
+
+        .example-post .post-structure {
+            padding-left: 20px;
+            color: #3D3035;
+            font-size: 0.9rem;
+            line-height: 1.8;
+        }
+
+        .example-post .post-structure li {
+            list-style: none;
+        }
+
+        .example-post .post-structure li::before {
+            content: "• ";
+            color: #F0B429;
+            font-weight: 700;
+        }
+
+        /* ===== ФУТЕР ===== */
+        .footer {
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px 36px;
+            margin-top: 50px;
+            border: 2px solid #f0e2d5;
+            box-shadow: 0 4px 20px rgba(240, 180, 41, 0.06);
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            color: #3D3035;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer .highlight {
+            color: #F0B429;
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .block-title {
+                font-size: 1.2rem;
+                padding: 14px 18px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 10px 12px;
+            }
+
+            .archetype-name {
+                min-width: 120px;
+                font-size: 0.85rem;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .themes-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .forbidden-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cheatsheet-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cheatsheet-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .principle-box {
+                padding: 20px 16px;
+            }
+
+            .formats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== НАВИГАЦИЯ ПО СТУПЕНЯМ ===== -->
+        <div class="nav-links">
+            <a href="hant_1.html">1. Внимание</a>
+            <a href="hant_2.html">2. Доверие</a>
+            <a href="hant_3.html">3. Прогрев</a>
+            <a href="hant_4.html">4. Желание</a>
+            <a href="hant_5.html" class="active">5. Покупка</a>
+        </div>
+
+        <!-- ===== ШАПКА ===== -->
+        <div class="hero">
+            <div class="badge">🛒 5-я ступень Лестницы Ханта</div>
+            <h1><span class="highlight">Покупка</span></h1>
+            <p class="subhead">
+                Клиент совершает покупку · Убрать все барьеры · Сделать процесс простым и безопасным
+            </p>
+        </div>
+
+        <!-- ===== ОБЩАЯ ИНФОРМАЦИЯ ===== -->
+        <div class="summary">
+            <h2>📋 Что происходит на 5-й ступени</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Состояние клиента</div>
+                    <div class="value">«Я хочу! Я готов! Дайте мне кнопку, где оплатить!»</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Твоя роль</div>
+                    <div class="value">Организатор · Администратор · Помощник</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Главная эмоция</div>
+                    <div class="value">Легкость · Безопасность · «Это легко»</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Ключевые слова</div>
+                    <div class="value">Купить, оплатить, сейчас, оформить, заказать</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ПРИНЦИП ===== -->
+        <div class="principle-box">
+            <span class="emoji-big">💡</span>
+            <h2>Главная задача <span class="highlight">5-й ступени</span></h2>
+            <p>
+                Убрать все барьеры на пути к покупке. Сделать процесс оплаты
+                <strong>очевидным, простым и безопасным</strong>.
+            </p>
+            <div class="key-idea">
+                «Я хочу! Я готов! Дайте мне кнопку, где оплатить!»
+            </div>
+            <p style="margin-top:12px;">
+                <strong>Эмоции, которые ты создаёшь:</strong> Уверенность, простота, «это легко», «я сделал правильный выбор».
+            </p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 1: ОРГАНИЗАТОР -->
+        <!-- ============================================================ -->
+        <div class="block organizer">
+            <div class="block-title">
+                <span class="emoji">📋</span> Архетип «Организатор / Администратор»
+                <span class="count">5 хуков</span>
+            </div>
+            <div class="category-desc">
+                <strong>Суть:</strong> Ты делаешь процесс покупки максимально простым и понятным. Клиент знает: что купить, как купить, что будет после.<br>
+                <strong>Эмоция:</strong> Легкость, безопасность, уверенность, «всё понятно».
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Хук</th>
+                        <th>Почему работает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Как оформить заказ за 2 минуты — пошаговая инструкция»</span>
+                                    </div>
+                                    <div class="hook-explanation">🧩 Убирает страх сложности</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Что вы получите сразу после оплаты — и что будет дальше»</span>
+                                    </div>
+                                    <div class="hook-explanation">🔮 Показывает процесс, убирает неизвестность</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">3</span>
+                                        <span class="hook-text">«3 способа оплаты — выберите удобный для вас»</span>
+                                    </div>
+                                    <div class="hook-explanation">💳 Убирает барьеры</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">4</span>
+                                        <span class="hook-text">«Как я провожу клиента от оплаты до результата — полная схема»</span>
+                                    </div>
+                                    <div class="hook-explanation">🗺️ Даёт уверенность и понимание процесса</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">5</span>
+                                        <span class="hook-text">«Что делать, если у вас возникли вопросы после покупки — моя поддержка»</span>
+                                    </div>
+                                    <div class="hook-explanation">🤝 Показывает заботу о клиенте</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="font-size:0.85rem; color:#5A4A50; line-height:2;">
+                            Убирает страх сложности<br>
+                            Показывает процесс, убирает неизвестность<br>
+                            Убирает барьеры<br>
+                            Даёт уверенность и понимание процесса<br>
+                            Показывает заботу о клиенте
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 2: ЗАБОТЛИВЫЙ ДРУГ -->
+        <!-- ============================================================ -->
+        <div class="block friend">
+            <div class="block-title">
+                <span class="emoji">🤗</span> Архетип «Заботливый друг / Помощник»
+                <span class="count">5 хуков</span>
+            </div>
+            <div class="category-desc">
+                <strong>Суть:</strong> Ты показываешь клиенту, что он в надёжных руках. Ты поддерживаешь его на каждом шагу.<br>
+                <strong>Эмоция:</strong> Комфорт, безопасность, «я не один».
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Хук</th>
+                        <th>Почему работает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Я лично проверяю каждого клиента на входе — вот зачем это нужно»</span>
+                                    </div>
+                                    <div class="hook-explanation">👤 Показывает персональный подход</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Мой чат-бот / помощник всегда на связи — чтобы вы не ждали»</span>
+                                    </div>
+                                    <div class="hook-explanation">💬 Убирает страх «меня бросят»</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">3</span>
+                                        <span class="hook-text">«Как я помогаю клиентам даже после завершения работы — моя политика»</span>
+                                    </div>
+                                    <div class="hook-explanation">⏳ Показывает долгосрочную заботу</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">4</span>
+                                        <span class="hook-text">«Частые вопросы после покупки — ответы на всё»</span>
+                                    </div>
+                                    <div class="hook-explanation">❓ Убирает страхи и неопределённость</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">5</span>
+                                        <span class="hook-text">«Что я делаю, если клиенту что-то не подошло — моя гарантия»</span>
+                                    </div>
+                                    <div class="hook-explanation">🛡️ Снимает страх «а вдруг не получится»</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="font-size:0.85rem; color:#5A4A50; line-height:2;">
+                            Показывает персональный подход<br>
+                            Убирает страх «меня бросят»<br>
+                            Показывает долгосрочную заботу<br>
+                            Убирает страхи и неопределённость<br>
+                            Снимает страх «а вдруг не получится»
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 3: ЛИДЕР -->
+        <!-- ============================================================ -->
+        <div class="block leader">
+            <div class="block-title">
+                <span class="emoji">👑</span> Архетип «Лидер / Доверие»
+                <span class="count">5 хуков</span>
+            </div>
+            <div class="category-desc">
+                <strong>Суть:</strong> Ты создаёшь уверенность в правильности выбора. Клиент чувствует: «Я доверяю этому человеку, он не подведёт».<br>
+                <strong>Эмоция:</strong> Уверенность, спокойствие, правильное решение.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Хук</th>
+                        <th>Почему работает</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Почему я верю в свой продукт — личная история»</span>
+                                    </div>
+                                    <div class="hook-explanation">💖 Показывает искренность и вовлечённость</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я тестировал свой продукт на себе — и что из этого вышло»</span>
+                                    </div>
+                                    <div class="hook-explanation">🧪 Доказательство эффективности</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">3</span>
+                                        <span class="hook-text">«Моя философия — почему я делаю то, что делаю»</span>
+                                    </div>
+                                    <div class="hook-explanation">🌱 Глубина, ценности</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">4</span>
+                                        <span class="hook-text">«Что я обещаю каждому клиенту — и почему я держу слово»</span>
+                                    </div>
+                                    <div class="hook-explanation">🤝 Гарантия, уверенность</div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">5</span>
+                                        <span class="hook-text">«Как я работаю над продуктом, чтобы он стал лучше — моя ответственность»</span>
+                                    </div>
+                                    <div class="hook-explanation">📈 Показывает постоянное развитие</div>
+                                </div>
+                            </div>
+                        </td>
+                        <td style="font-size:0.85rem; color:#5A4A50; line-height:2;">
+                            Показывает искренность и вовлечённость<br>
+                            Доказательство эффективности<br>
+                            Глубина, ценности<br>
+                            Гарантия, уверенность<br>
+                            Показывает постоянное развитие
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ===== 10 УНИВЕРСАЛЬНЫХ ТЕМ ===== -->
+        <div class="themes-section">
+            <h3>📝 10 универсальных тем для 5-й ступени</h3>
+            <div class="themes-grid">
+                <div class="theme-item">
+                    <div class="t-num">Тема №1</div>
+                    <div class="t-title">«Как оформить заказ за 2 минуты — пошаговая инструкция»</div>
+                    <div class="t-hook">«Никакой сложности. Всё просто и понятно»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №2</div>
+                    <div class="t-title">«Что вы получите сразу после оплаты — и что будет дальше»</div>
+                    <div class="t-hook">«Я не бросаю клиентов. Я веду их за руку от начала до результата»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №3</div>
+                    <div class="t-title">«Почему мои клиенты быстро получают результаты — моя система»</div>
+                    <div class="t-hook">«Я не трачу твоё время. Я даю чёткие шаги. И они работают»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №4</div>
+                    <div class="t-title">«Моя гарантия — почему я отвечаю за результат»</div>
+                    <div class="t-hook">«Я не боюсь ответственности. Потому что я знаю: мой метод работает»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №5</div>
+                    <div class="t-title">«Почему 80% моих клиентов приходят по рекомендации»</div>
+                    <div class="t-hook">«Сарафанное радио — лучшая реклама. И я горжусь этим»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №6</div>
+                    <div class="t-title">«Что делать, если у вас возникли вопросы после покупки — моя поддержка»</div>
+                    <div class="t-hook">«Я всегда на связи. Вы не останетесь один на один с проблемой»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №7</div>
+                    <div class="t-title">«Почему вам стоит работать именно со мной — 3 причины»</div>
+                    <div class="t-hook">«Я не лучше других. Я просто другая. И это моя сила»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №8</div>
+                    <div class="t-title">«Моя философия — почему я делаю то, что делаю»</div>
+                    <div class="t-hook">«Я верю, что каждая женщина может жить из позиции взрослой»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №9</div>
+                    <div class="t-title">«Как я провожу клиента от оплаты до результата — полная схема»</div>
+                    <div class="t-hook">«Шаг за шагом. Без хаоса. Без страха»</div>
+                </div>
+                <div class="theme-item">
+                    <div class="t-num">Тема №10</div>
+                    <div class="t-title">«Почему я верю в свой продукт — личная история»</div>
+                    <div class="t-hook">«Я создавала это не для денег. Я создавала это, потому что сама через это прошла»</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ФОРМАТЫ ===== -->
+        <div class="themes-section" style="margin-top:16px;">
+            <h3>🎨 Форматы контента для 5-й ступени</h3>
+            <div class="formats-grid">
+                <div class="format-item">
+                    <span class="emoji">🔘</span>
+                    <strong>Кнопка «Купить» в шапке</strong>
+                    <span>Максимально доступно</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">📱</span>
+                    <strong>Страница продажи в сторис</strong>
+                    <span>Клиент видит оффер и может сразу перейти</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">📝</span>
+                    <strong>Пост-инструкция «Как купить»</strong>
+                    <span>Убирает технические барьеры</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">❓</span>
+                    <strong>FAQ пост</strong>
+                    <span>Ответы на все вопросы перед покупкой</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">🎥</span>
+                    <strong>Видео-разбор продукта</strong>
+                    <span>Показывает, что именно получает клиент</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">🔗</span>
+                    <strong>Прямая ссылка на оплату</strong>
+                    <span>Минимальный путь от интереса к покупке</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">🎁</span>
+                    <strong>Акция / бонус с ограничением</strong>
+                    <span>Последний толчок к покупке</span>
+                </div>
+                <div class="format-item">
+                    <span class="emoji">💬</span>
+                    <strong>Прямой эфир «Вопрос-ответ»</strong>
+                    <span>Живое снятие возражений</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ЧЕГО НЕЛЬЗЯ ===== -->
+        <div class="themes-section" style="margin-top:16px;">
+            <h3>🚫 Чего НЕЛЬЗЯ делать на 5-й ступени</h3>
+            <div class="forbidden-grid">
+                <div class="forbidden-item">
+                    <span class="f-icon">❌</span> <strong>Усложнять процесс оплаты</strong>
+                    <span>— Каждый лишний шаг снижает конверсию</span>
+                </div>
+                <div class="forbidden-item">
+                    <span class="f-icon">❌</span> <strong>Заставлять клиента ждать</strong>
+                    <span>— После решения купить клиент хочет получить продукт сразу</span>
+                </div>
+                <div class="forbidden-item">
+                    <span class="f-icon">❌</span> <strong>Игнорировать вопросы</strong>
+                    <span>— Даже маленький вопрос может остановить покупку</span>
+                </div>
+                <div class="forbidden-item">
+                    <span class="f-icon">❌</span> <strong>Не давать контактов поддержки</strong>
+                    <span>— Клиент должен знать, к кому обратиться, если что-то пошло не так</span>
+                </div>
+                <div class="forbidden-item" style="grid-column: 1 / -1;">
+                    <span class="f-icon">❌</span> <strong>Не подтверждать оплату</strong>
+                    <span>— Клиент должен получить чёткий сигнал: «Покупка оформлена, вы молодец»</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ШПАРГАЛКА ===== -->
+        <div class="cheatsheet">
+            <h3>📌 Итоговая шпаргалка по 5-й ступени</h3>
+            <div class="cheatsheet-grid">
+                <div class="cheatsheet-item">
+                    <div class="label">Состояние клиента</div>
+                    <div class="value">«Я хочу! Дайте мне кнопку!»</div>
+                </div>
+                <div class="cheatsheet-item">
+                    <div class="label">Твоя роль</div>
+                    <div class="value">Организатор · Администратор · Заботливый друг</div>
+                </div>
+                <div class="cheatsheet-item">
+                    <div class="label">Ключевые слова</div>
+                    <div class="value">Купить, оплатить, сейчас, оформить, заказать</div>
+                </div>
+                <div class="cheatsheet-item">
+                    <div class="label">Главная эмоция</div>
+                    <div class="value">Легкость · Безопасность · Уверенность</div>
+                </div>
+                <div class="cheatsheet-item">
+                    <div class="label">Запрещено</div>
+                    <div class="value">Усложнять оплату · Игнорировать вопросы</div>
+                </div>
+                <div class="cheatsheet-item">
+                    <div class="label">Метрика успеха</div>
+                    <div class="value">Продажи · Конверсия · Повторные покупки</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ПРИМЕРЫ ПОСТОВ ===== -->
+        <div style="margin-top:30px;">
+            <h2 style="color:#1F1A1C; font-size:1.4rem;">📝 Примеры готовых постов</h2>
+
+            <div class="example-post">
+                <h4>Пример 1 (Архетип Организатор)</h4>
+                <div class="post-title">«Как купить мой продукт за 2 минуты — пошаговая инструкция»</div>
+                <div class="post-structure">
+                    <li><strong>Вступление:</strong> «Многие боятся оформлять заказ, потому что кажется, что это сложно. На самом деле — это 2 минуты. Вот как это выглядит».</li>
+                    <li><strong>Шаг 1:</strong> Нажмите на ссылку / кнопку.</li>
+                    <li><strong>Шаг 2:</strong> Выберите способ оплаты.</li>
+                    <li><strong>Шаг 3:</strong> Введите данные.</li>
+                    <li><strong>Шаг 4:</strong> Нажмите «Оплатить».</li>
+                    <li><strong>Что дальше:</strong> Что получите сразу после оплаты.</li>
+                    <li><strong>Итог + ссылка:</strong> «Нажимайте сюда → [ссылка]»</li>
+                </div>
+            </div>
+
+            <div class="example-post">
+                <h4>Пример 2 (Архетип Заботливый друг)</h4>
+                <div class="post-title">«Что делать, если у вас возникли вопросы после покупки — моя поддержка всегда на связи»</div>
+                <div class="post-structure">
+                    <li><strong>Вступление:</strong> «Я знаю, как важно чувствовать поддержку после покупки. Поэтому я всегда на связи».</li>
+                    <li><strong>Способы поддержки:</strong> Чат, Телеграм, email.</li>
+                    <li><strong>Какие вопросы я решаю:</strong> Технические, организационные, личные.</li>
+                    <li><strong>Гарантия:</strong> Если что-то не так — я помогу.</li>
+                    <li><strong>Итог + контакты:</strong> «Сохраните эту ссылку → [ссылка]»</li>
+                </div>
+            </div>
+
+            <div class="example-post">
+                <h4>Пример 3 (Архетип Лидер)</h4>
+                <div class="post-title">«Почему я верю в свой продукт — личная история, которая всё объясняет»</div>
+                <div class="post-structure">
+                    <li><strong>Вступление:</strong> «Я создавала этот продукт не для денег. Я создавала его, потому что сама через это прошла».</li>
+                    <li><strong>Личная история:</strong> Моя боль, мой поиск, моё решение.</li>
+                    <li><strong>Как родился продукт:</strong> Что я узнала, как создавала.</li>
+                    <li><strong>Почему я верю в него:</strong> Потому что это работает на мне и на моих клиентах.</li>
+                    <li><strong>Итог + оффер:</strong> «Если вы тоже хотите пройти этот путь — я здесь. Нажимайте → [ссылка]»</li>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p><strong>5-я ступень Лестницы Ханта</strong></p>
+            <p>Твоя задача — сделать процесс покупки <span class="highlight">максимально простым и безопасным</span>, чтобы клиент чувствовал лёгкость и уверенность.</p>
+            <p style="margin-top:8px; font-size:0.85rem;">«Я хочу! Я готов! Дайте мне кнопку, где оплатить!»</p>
+        </div>
+    </div>
+</body>
+</html>

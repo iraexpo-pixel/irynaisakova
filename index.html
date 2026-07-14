@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лестница Ханта — 50 готовых тем для контента</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FDF8F9;
+      color: #1F1A1C;
+      line-height: 1.5;
+      padding: 0 16px;
+    }
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+    h1 { font-size: 2.6rem; line-height: 1.1; margin-bottom: 12px; }
+    h2 { font-size: 1.8rem; line-height: 1.2; margin-top: 48px; margin-bottom: 16px; }
+    h3 { font-size: 1.3rem; margin-bottom: 10px; }
+    .subhead { font-size: 1.2rem; color: #5A4A50; font-weight: 500; margin-bottom: 24px; }
+    .section { margin-bottom: 48px; }
+    .section-intro {
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px 28px;
+      box-shadow: 0 8px 30px rgba(232, 131, 110, 0.08);
+      margin-bottom: 40px;
+    }
+    .pain-box {
+      background: #FDF1F2;
+      border-radius: 16px;
+      padding: 24px 24px 8px 24px;
+      margin: 20px 0 28px;
+    }
+    .pain-item {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+    .pain-num {
+      font-weight: 800;
+      font-size: 1.1rem;
+      color: #D4768A;
+      min-width: 28px;
+    }
+    .pain-item strong { display: block; margin-bottom: 2px; }
+    .pain-item p { color: #3D3035; font-size: 0.98rem; }
+
+    .highlight { color: #D4768A; }
+    .highlight-gold { color: #F0B429; }
+
+    /* ====== ЯРКИЙ БЛОК ТАБЛИЦЫ ====== */
+    .table-wrap {
+      background: linear-gradient(135deg, #FFF5F0, #FDF1F2);
+      border-radius: 20px;
+      padding: 20px 16px 20px 20px;
+      box-shadow: 0 8px 30px rgba(212, 118, 138, 0.12);
+      overflow-x: auto;
+      margin: 20px 0 12px;
+      border: 2px solid #D4768A;
+    }
+    .step-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.9rem;
+      min-width: 500px;
+    }
+    .step-table th {
+      text-align: left;
+      padding: 14px 8px 10px 0;
+      font-weight: 700;
+      color: #1F1A1C;
+      border-bottom: 2px solid #D4768A;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .step-table td {
+      padding: 14px 8px 14px 0;
+      border-bottom: 1px solid rgba(212, 118, 138, 0.15);
+      vertical-align: top;
+      font-size: 0.92rem;
+    }
+    .step-table tr:last-child td { border-bottom: 0; }
+    .step-label {
+      font-weight: 700;
+      color: #D4768A;
+      font-size: 0.95rem;
+    }
+    .step-label.s1 { color: #E8A0BF; }
+    .step-label.s2 { color: #C45A6E; }
+    .step-label.s3 { color: #D4768A; }
+    .step-label.s4 { color: #E8836E; }
+    .step-label.s5 { color: #F0B429; }
+    .text-muted { color: #8A7A80; }
+    .check-green { color: #4CAF50; font-weight: 700; }
+    .cross-red { color: #E8836E; font-weight: 700; }
+
+    /* ====== ПРИМЕРЫ ТЕМ ====== */
+    .examples-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 16px 0 8px;
+    }
+    .example-card {
+      background: #fff;
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: 0 4px 16px rgba(232, 131, 110, 0.06);
+      border-left: 4px solid #D4768A;
+    }
+    .example-card .num {
+      font-weight: 700;
+      color: #D4768A;
+      font-size: 0.8rem;
+    }
+    .example-card .title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      margin: 3px 0 2px;
+      color: #1F1A1C;
+    }
+    .example-card .hook {
+      color: #3D3035;
+      font-style: italic;
+      background: #FDF1F2;
+      padding: 4px 12px;
+      border-radius: 8px;
+      display: inline-block;
+      font-size: 0.85rem;
+      margin-top: 2px;
+    }
+    .example-card .meta {
+      font-size: 0.7rem;
+      color: #8A7A80;
+      margin-top: 2px;
+    }
+
+    .example-card.s1 { border-left-color: #E8A0BF; }
+    .example-card.s1 .num { color: #E8A0BF; }
+    .example-card.s2 { border-left-color: #C45A6E; }
+    .example-card.s2 .num { color: #C45A6E; }
+    .example-card.s3 { border-left-color: #D4768A; }
+    .example-card.s3 .num { color: #D4768A; }
+    .example-card.s4 { border-left-color: #E8836E; }
+    .example-card.s4 .num { color: #E8836E; }
+    .example-card.s5 { border-left-color: #F0B429; }
+    .example-card.s5 .num { color: #F0B429; }
+
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .step-header h3 { margin: 0; }
+
+    /* ====== БОЛЬШОЙ БЛОК "50 ТЕМ" ====== */
+    .big-number-block {
+      background: linear-gradient(135deg, #D4768A, #E8836E);
+      border-radius: 20px;
+      padding: 28px 30px;
+      color: #fff;
+      text-align: center;
+      margin: 20px 0 10px;
+    }
+    .big-number-block .number {
+      font-size: 4rem;
+      font-weight: 800;
+      line-height: 1;
+      display: block;
+    }
+    .big-number-block .label {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+    .big-number-block .sub {
+      font-size: 0.95rem;
+      color: #FFD9D9;
+      margin-top: 8px;
+    }
+
+    /* ====== РЕМАРКА "ЭТО ПРИМЕР" ====== */
+    .example-remark {
+      text-align: center;
+      font-size: 0.85rem;
+      color: #8A7A80;
+      background: #fff;
+      padding: 8px 16px;
+      border-radius: 10px;
+      margin: 6px 0 10px;
+      border: 1px dashed #D4768A;
+      display: inline-block;
+      width: 100%;
+    }
+    .example-remark strong {
+      color: #D4768A;
+    }
+
+    .cta-box {
+      background: linear-gradient(135deg, #D4768A, #E8836E);
+      color: #fff;
+      border-radius: 28px;
+      padding: 36px 28px 32px;
+      text-align: center;
+      margin-top: 40px;
+    }
+    .cta-box h2 {
+      margin-top: 0;
+      color: #fff;
+      font-size: 2rem;
+    }
+    .cta-box p {
+      color: #FFF0F0;
+      font-size: 1.05rem;
+      max-width: 480px;
+      margin: 8px auto 24px;
+    }
+    .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #D4768A;
+      font-weight: 700;
+      font-size: 1.2rem;
+      padding: 16px 44px;
+      border-radius: 60px;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      box-shadow: 0 8px 24px rgba(212, 118, 138, 0.3);
+      text-decoration: none;
+    }
+    .cta-btn:hover {
+      background: #FFF5F5;
+      transform: scale(1.01);
+    }
+    .cta-small {
+      font-size: 0.9rem;
+      color: #FFD9D9;
+      margin-top: 16px;
+    }
+    .ps-box {
+      background: #FDF1F2;
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-top: 32px;
+      font-size: 0.95rem;
+    }
+    .ps-box strong { color: #1F1A1C; }
+    hr {
+      border: 0;
+      height: 1px;
+      background: linear-gradient(to right, #F0E2E5, transparent);
+      margin: 40px 0 24px;
+    }
+
+    .bonus-tag {
+      display: inline-block;
+      background: #F0B429;
+      color: #1F1A1C;
+      font-weight: 800;
+      font-size: 0.65rem;
+      padding: 2px 14px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-left: 8px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 1.8rem; }
+      h2 { font-size: 1.5rem; }
+      .subhead { font-size: 1rem; }
+      .container { padding: 20px 8px 40px; }
+      .section-intro { padding: 20px 16px; }
+      .cta-box { padding: 28px 16px; }
+      .cta-box h2 { font-size: 1.6rem; }
+      .cta-btn { padding: 14px 28px; font-size: 1rem; width: 100%; }
+      .pain-item { gap: 8px; }
+      .step-table { font-size: 0.78rem; min-width: 360px; }
+      .examples-grid { grid-template-columns: 1fr; }
+      .big-number-block .number { font-size: 3rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ====== ХЭДЕР ====== -->
+  <div class="section-intro">
+    <div style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:#D4768A; font-weight:600; margin-bottom:4px;">
+      🔥 50 готовых тем
+    </div>
+    <h1>Ты постишь <span class="highlight">советы</span>, <span class="highlight">лайфхаки</span> и <span class="highlight">экспертность</span> неделями. <br>А клиенты <span class="highlight">всё равно уходят</span>.</h1>
+    <p class="subhead">
+      Потому что ты пропускаешь <strong>самые важные ступени</strong> Лестницы Ханта.
+      <br>Ты даёшь ценность, но не создаёшь <strong>доверие</strong> и <strong>желание</strong>.
+    </p>
+    <div style="background:#FDF1F2; border-radius:12px; padding:14px 18px; margin-top:16px;">
+      <p style="font-size:0.95rem; margin:0; color:#3D3035;">
+        💡 <strong>Инсайт:</strong> 80% экспертов застревают на 3-й ступени (Экспертность). Они дают советы, но забывают показать себя как <strong>личность</strong> (ступень 2) и показать <strong>трансформацию</strong> клиента (ступень 4). 
+        <br><span style="color:#D4768A; font-weight:600;">Именно поэтому клиенты берут твои советы и уходят к другим.</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ====== БОЛЬ ====== -->
+  <div class="section">
+    <h2>Знакомо?</h2>
+    <div class="pain-box">
+      <div class="pain-item">
+        <span class="pain-num">01</span>
+        <div><strong>Ты даёшь тонну пользы,</strong><p>а в директ приходят только с вопросами «Сколько стоит?» и исчезают.</p></div>
+      </div>
+      <div class="pain-item">
+        <span class="pain-num">02</span>
+        <div><strong>Чувствуешь, что контент «как у всех».</strong><p>Он есть, но он <strong>не ведёт к продажам</strong>.</p></div>
+      </div>
+      <div class="pain-item">
+        <span class="pain-num">03</span>
+        <div><strong>Устала гадать:</strong><p>«Что написать сегодня, чтобы было полезно <em>И</em> вело к деньгам?»</p></div>
+      </div>
+      <div class="pain-item">
+        <span class="pain-num">04</span>
+        <div><strong>Ты устала от стресса</strong><p>просыпаться с мыслью «что выложить» и ложиться с той же.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== ИНСАЙТ с ТАБЛИЦЕЙ ====== -->
+  <div class="section">
+    <h2>Вот почему твой контент НЕ продаёт</h2>
+    <p style="font-size:1.05rem; margin-bottom:16px;"><strong>Ты продаёшь на 3-й ступени тем, кто живёт на 1-й и 2-й.</strong></p>
+    <div class="table-wrap">
+      <table class="step-table">
+        <thead>
+          <tr><th>Ступень</th><th>Что нужно клиенту</th><th>Что ты обычно делаешь</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="step-label s1">1. Захват</span></td>
+            <td>«Останови меня! Это про меня!»</td>
+            <td>Фото кофе, «доброе утро»</td>
+          </tr>
+          <tr>
+            <td><span class="step-label s2">2. Доверие → Аутентичность</span></td>
+            <td>«Я ей верю. Она как я»</td>
+            <td><span class="cross-red">❌ ПРОПУСКАЕШЬ</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-label s3">3. Прогрев → Экспертность</span></td>
+            <td>«Она шарит! Дай ещё!»</td>
+            <td><span class="check-green">✅ Советы, польза, лайфхаки</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-label s4">4. Желание</span></td>
+            <td>«ХОЧУ ТАК ЖЕ!»</td>
+            <td><span class="cross-red">❌ ПРОПУСКАЕШЬ</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-label s5">5. Покупка</span></td>
+            <td>«Где оплатить?»</td>
+            <td>Редко, когда «в настроении»</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px; font-size:0.98rem;">
+      <strong>Результат:</strong> Ты даёшь ценность (ступень 3), но <strong>не создаёшь доверие и желание</strong>. 
+      Клиент получает твои советы и уходит с ними к тому, кто знает, как закрыть <strong>все 5 ступеней</strong>.
+    </p>
+  </div>
+
+  <!-- ====== 50 ТЕМ ====== -->
+  <div class="section">
+    <h2>50 тем, которые проведут клиента <span class="highlight">по всем 5 ступеням</span></h2>
+    <p style="font-size:1.05rem; margin-bottom:8px;">
+      Я собрала <strong>50 готовых тем</strong> — по 10 на каждую ступень. 
+      <br>Ты просто берёшь и публикуешь. <span class="text-muted">Никакой воды. Только рабочие формулировки.</span>
+    </p>
+
+    <div class="big-number-block">
+      <span class="number">50</span>
+      <span class="label">готовых тем</span>
+      <div class="sub">по 10 на каждую ступень Лестницы Ханта</div>
+    </div>
+
+    <!-- РЕМАРКА: ЭТО ПРИМЕРЫ -->
+    <div class="example-remark">
+      ⚡ <strong>Это примеры</strong> — по 1 теме из 10 для каждой ступени. Полный список — внутри бота.
+    </div>
+
+    <!-- СТУПЕНЬ 1 — ЗАХВАТ -->
+    <div class="step-header">
+      <h3><span style="background:#E8A0BF; color:#fff; padding:2px 12px; border-radius:20px; font-size:0.8rem;">01</span> Захват внимания</h3>
+      <span class="bonus-tag">10 тем</span>
+    </div>
+    <div class="examples-grid">
+      <div class="example-card s1">
+        <div class="num">Тема №2</div>
+        <div class="title">Мой самый страшный страх, который оказался иллюзией</div>
+        <div class="hook">«Годами я боялась этого. А когда столкнулась — поняла, что боялась зря»</div>
+        <div class="meta">Текст / Рилс</div>
+      </div>
+    </div>
+
+    <!-- СТУПЕНЬ 2 — ДОВЕРИЕ → АУТЕНТИЧНОСТЬ -->
+    <div class="step-header">
+      <h3><span style="background:#C45A6E; color:#fff; padding:2px 12px; border-radius:20px; font-size:0.8rem;">02</span> Доверие → Аутентичность</h3>
+      <span class="bonus-tag">10 тем</span>
+    </div>
+    <div class="examples-grid">
+      <div class="example-card s2">
+        <div class="num">Тема №1</div>
+        <div class="title">Почему я учусь каждый день — и как это меняет мою жизнь</div>
+        <div class="hook">«Я не могу жить без нового знания. Это мой наркотик»</div>
+        <div class="meta">Текст / Рилс</div>
+      </div>
+    </div>
+
+    <!-- СТУПЕНЬ 3 — ПРОГРЕВ → ЭКСПЕРТНОСТЬ -->
+    <div class="step-header">
+      <h3><span style="background:#D4768A; color:#fff; padding:2px 12px; border-radius:20px; font-size:0.8rem;">03</span> Прогрев → Экспертность</h3>
+      <span class="bonus-tag">10 тем</span>
+    </div>
+    <div class="examples-grid">
+      <div class="example-card s3">
+        <div class="num">Тема №3</div>
+        <div class="title">Как мои клиентки понимают, где именно застряли и почему</div>
+        <div class="hook">«Я не даю готовые ответы. Я даю инструмент, чтобы найти свой»</div>
+        <div class="meta">Карусель</div>
+      </div>
+    </div>
+
+    <!-- СТУПЕНЬ 4 — ЖЕЛАНИЕ КУПИТЬ -->
+    <div class="step-header">
+      <h3><span style="background:#E8836E; color:#fff; padding:2px 12px; border-radius:20px; font-size:0.8rem;">04</span> Желание купить</h3>
+      <span class="bonus-tag">10 тем</span>
+    </div>
+    <div class="examples-grid">
+      <div class="example-card s4">
+        <div class="num">Тема №4</div>
+        <div class="title">Мой оффер: что я предлагаю и кому это нужно</div>
+        <div class="hook">«Вот мой продукт. Вот для кого он. Вот что вы получите. Без воды»</div>
+        <div class="meta">Карусель</div>
+      </div>
+    </div>
+
+    <!-- СТУПЕНЬ 5 — ПОКУПКА -->
+    <div class="step-header">
+      <h3><span style="background:#F0B429; color:#1F1A1C; padding:2px 12px; border-radius:20px; font-size:0.8rem;">05</span> Покупка</h3>
+      <span class="bonus-tag">10 тем</span>
+    </div>
+    <div class="examples-grid">
+      <div class="example-card s5">
+        <div class="num">Тема №1</div>
+        <div class="title">Как оформить заказ за 2 минуты — пошаговая инструкция</div>
+        <div class="hook">«Никакой сложности. Всё просто и понятно»</div>
+        <div class="meta">Текст / Карусель</div>
+      </div>
+    </div>
+
+    <p style="margin-top:20px; text-align:center; color:#8A7A80; font-size:0.9rem;">
+      👆 <strong>Это всего лишь 5 примеров из 50</strong>. Полный список — внутри бота.
+    </p>
+  </div>
+
+  <!-- ====== ЭТО РАБОТАЕТ ====== -->
+  <div class="section" style="background:#FDF1F2; border-radius:20px; padding:24px 20px;">
+    <h2 style="margin-top:0;">Эта система работает, даже если у тебя пока нет результатов</h2>
+    <p>Когда ты показываешь клиенту <strong>весь путь</strong>, а не только «я эксперт, слушай меня», он:</p>
+    <ul style="margin:12px 0 0 20px; font-size:1rem; line-height:1.8;">
+      <li><strong>начинает тебе доверять</strong> (ты честно говоришь о себе — ступень 2)</li>
+      <li><strong>видит себя в результатах других</strong> (ступень 4)</li>
+      <li><strong>понимает, что ты — именно тот человек, который ему нужен</strong> (ступень 5)</li>
+    </ul>
+    <p style="margin-top:14px;"><strong>И тогда он покупает.</strong> Не потому что ты «впарила», а потому что он <strong>САМ понял</strong>, что это его решение.</p>
+  </div>
+
+  <hr />
+
+  <!-- ====== КРЮК ====== -->
+  <div class="section" style="text-align:center;">
+    <div style="background:#fff; border-left:4px solid #D4768A; padding:20px 24px; border-radius:12px; margin:24px 0; box-shadow: 0 4px 16px rgba(232, 131, 110, 0.06);">
+      <p style="font-size:1.1rem; margin:0;">
+        <strong>Пока ты читаешь это...</strong><br>
+        Твой конкурент уже знает, о чём писать завтра, послезавтра и через неделю.
+        <br><span style="color:#D4768A; font-weight:600;">Ты будешь смотреть, как он растёт, и думать «надо было взять».</span>
+      </p>
+    </div>
+  </div>
+
+  <!-- ====== CTA ====== -->
+  <div class="cta-box">
+    <h2>Получи <span style="color:#FFF0F0;">50 тем</span> для контента<br>по Лестнице Ханта</h2>
+    <p><strong>Бесплатно.</strong> Переходи в Telegram-бот — и материал сразу у тебя. <br><span style="color:#FFD9D9; font-size:0.9rem;">50 тем, которые проведут клиента от «кто ты?» до «я покупаю»</span></p>
+    <a href="https://t.me/generat_content_bot" target="_blank" class="cta-btn">ЗАБРАТЬ 50 ТЕМ →</a>
+    <div class="cta-small">Переход в Telegram-бот • 2 минуты • 50 готовых тем</div>
+  </div>
+
+  <!-- ====== P.S. ====== -->
+  <div class="ps-box">
+    <p><strong>P.S.</strong> Я не обещаю, что после этих тем у тебя будет очередь из клиентов.</p>
+    <p style="margin-top:6px;"><strong>Но я гарантирую:</strong> ты перестанешь гадать, что написать. Ты увидишь, как контент начинает работать <strong>системно и предсказуемо</strong>. А когда увидишь результат — захочешь <strong>ещё больше</strong>.</p>
+    <p style="margin-top:8px; color:#D4768A; font-weight:500;">P.P.S. Внутри бота тебя ждёт не только 50 тем, но и кое-что, что изменит твой подход к контенту навсегда 😉</p>
+  </div>
+
+  <div style="text-align:center; margin-top:40px; font-size:0.75rem; color:#B0A0A6; border-top:1px solid #F0E2E5; padding-top:24px;">
+    © 2026 · Лестница Ханта · 50 готовых тем для контента
+  </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Лестница Ханта — 50 готовых тем для контента</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #FDF8F9;
+      color: #1F1A1C;
+      line-height: 1.5;
+      padding: 0 16px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px 60px; }
+    h1, h2, h3 { font-weight: 700; letter-spacing: -0.02em; }
+    h1 { font-size: 2.6rem; line-height: 1.1; margin-bottom: 12px; }
+    h2 { font-size: 2rem; line-height: 1.2; margin-top: 48px; margin-bottom: 16px; }
+    h3 { font-size: 1.2rem; margin: 0 0 4px; }
+    .subhead { font-size: 1.15rem; color: #5A4A50; font-weight: 400; margin-bottom: 24px; }
+
+    .section { margin-bottom: 40px; }
+    .intro-box {
+      background: #fff;
+      border-radius: 24px;
+      padding: 32px 32px 28px;
+      box-shadow: 0 8px 30px rgba(232, 131, 110, 0.08);
+      margin-bottom: 32px;
+    }
+    .intro-box .highlight { color: #D4768A; }
+
+    .step-block {
+      background: #fff;
+      border-radius: 18px;
+      padding: 24px 28px 20px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 20px rgba(232, 131, 110, 0.06);
+      border-left: 5px solid #D4768A;
+    }
+    .step-block .step-head {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 4px;
+    }
+    .step-block .step-num {
+      display: inline-block;
+      background: #D4768A;
+      color: #fff;
+      font-weight: 700;
+      font-size: 0.7rem;
+      padding: 2px 14px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .step-block .step-title {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #1F1A1C;
+    }
+    .step-block .step-role {
+      font-size: 0.9rem;
+      color: #8A7A80;
+      margin-bottom: 10px;
+    }
+    .step-block .step-desc {
+      color: #3D3035;
+      font-size: 0.96rem;
+      line-height: 1.6;
+      margin-bottom: 12px;
+    }
+    .theme-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 6px;
+    }
+    .theme-item {
+      background: #FDF1F2;
+      border-radius: 10px;
+      padding: 12px 14px;
+      border-left: 3px solid #D4768A;
+    }
+    .theme-item .t-num {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: #D4768A;
+    }
+    .theme-item .t-title {
+      font-weight: 600;
+      font-size: 0.92rem;
+      color: #1F1A1C;
+      margin: 1px 0 2px;
+    }
+    .theme-item .t-hook {
+      font-style: italic;
+      font-size: 0.85rem;
+      color: #3D3035;
+      background: #fff;
+      padding: 3px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-top: 2px;
+    }
+    .theme-item .t-meta {
+      font-size: 0.7rem;
+      color: #8A7A80;
+      margin-top: 3px;
+    }
+
+    .step-block.s1 { border-left-color: #E8A0BF; }
+    .step-block.s2 { border-left-color: #D4768A; }
+    .step-block.s3 { border-left-color: #C45A6E; }
+    .step-block.s4 { border-left-color: #E8836E; }
+    .step-block.s5 { border-left-color: #F0B429; }
+
+    .step-block.s1 .step-num { background: #E8A0BF; }
+    .step-block.s2 .step-num { background: #D4768A; }
+    .step-block.s3 .step-num { background: #C45A6E; }
+    .step-block.s4 .step-num { background: #E8836E; }
+    .step-block.s5 .step-num { background: #F0B429; }
+
+    .step-block.s1 .theme-item { border-left-color: #E8A0BF; }
+    .step-block.s2 .theme-item { border-left-color: #D4768A; }
+    .step-block.s3 .theme-item { border-left-color: #C45A6E; }
+    .step-block.s4 .theme-item { border-left-color: #E8836E; }
+    .step-block.s5 .theme-item { border-left-color: #F0B429; }
+
+    .step-block.s1 .theme-item .t-num { color: #E8A0BF; }
+    .step-block.s2 .theme-item .t-num { color: #D4768A; }
+    .step-block.s3 .theme-item .t-num { color: #C45A6E; }
+    .step-block.s4 .theme-item .t-num { color: #E8836E; }
+    .step-block.s5 .theme-item .t-num { color: #F0B429; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .constructor-block {
+      background: linear-gradient(135deg, #FFF5E6, #FFE8E0, #FFF0E8);
+      border-radius: 24px;
+      padding: 44px 40px 40px;
+      margin-top: 20px;
+      border: 2px solid #F0B429;
+      box-shadow: 0 12px 40px rgba(240, 180, 41, 0.20);
+    }
+    .constructor-block .badge {
+      display: inline-block;
+      background: #F0B429;
+      color: #1F1A1C;
+      font-weight: 800;
+      font-size: 0.7rem;
+      padding: 4px 18px;
+      border-radius: 20px;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .constructor-block h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      color: #1F1A1C;
+    }
+    .constructor-block h2 .highlight { color: #D4768A; }
+
+    .constructor-block .sell-blocks {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 18px;
+      margin: 20px 0 24px;
+    }
+    .constructor-block .sell-block {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(4px);
+      border-radius: 16px;
+      padding: 22px 20px;
+      border: 1px solid rgba(240, 180, 41, 0.2);
+      box-shadow: 0 4px 16px rgba(240, 180, 41, 0.06);
+    }
+    .constructor-block .sell-block .emoji-big {
+      font-size: 32px;
+      display: block;
+      margin-bottom: 6px;
+    }
+    .constructor-block .sell-block h4 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #1F1A1C;
+      margin-bottom: 4px;
+    }
+    .constructor-block .sell-block p {
+      font-size: 0.92rem;
+      color: #3D3035;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .constructor-block .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0 24px;
+    }
+    .constructor-block .feature {
+      background: #fff;
+      border-radius: 14px;
+      padding: 18px 16px;
+      text-align: center;
+      border: 1px solid rgba(232, 131, 110, 0.08);
+    }
+    .constructor-block .feature .emoji { font-size: 28px; display: block; margin-bottom: 6px; }
+    .constructor-block .feature strong { display: block; font-size: 0.95rem; color: #1F1A1C; }
+    .constructor-block .feature span { font-size: 0.85rem; color: #5A4A50; }
+
+    .constructor-block .actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 8px;
+    }
+    .btn-primary {
+      display: inline-block;
+      background: linear-gradient(135deg, #D4768A, #E8836E);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 16px 40px;
+      border-radius: 60px;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: 0.2s;
+      text-decoration: none;
+      box-shadow: 0 8px 24px rgba(212, 118, 138, 0.25);
+    }
+    .btn-primary:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 32px rgba(212, 118, 138, 0.35);
+    }
+    .btn-ghost-pink {
+      display: inline-block;
+      background: transparent;
+      color: #D4768A;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 14px 28px;
+      border-radius: 60px;
+      border: 1px solid #D4768A;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: 0.2s;
+      text-decoration: none;
+    }
+    .btn-ghost-pink:hover {
+      background: #FDF1F2;
+    }
+    .constructor-block .price-note {
+      font-size: 0.9rem;
+      color: #8A7A80;
+      margin-top: 12px;
+    }
+    .constructor-block .price-note strong { color: #D4768A; }
+
+    /* ===== НОВАЯ ЯРКАЯ ПЛАШКА-ПРИЗЫВ ===== */
+    .cta-banner {
+      background: linear-gradient(135deg, #D4768A, #E8836E, #F0B429);
+      border-radius: 20px;
+      padding: 32px 36px;
+      margin: 28px 0 24px;
+      box-shadow: 0 12px 40px rgba(212, 118, 138, 0.30);
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #fff;
+    }
+    .cta-banner::before {
+      content: "⚡";
+      position: absolute;
+      right: -10px;
+      top: -20px;
+      font-size: 120px;
+      opacity: 0.10;
+      transform: rotate(15deg);
+    }
+    .cta-banner::after {
+      content: "🔥";
+      position: absolute;
+      left: -10px;
+      bottom: -30px;
+      font-size: 100px;
+      opacity: 0.10;
+      transform: rotate(-10deg);
+    }
+    .cta-banner .cta-title {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-banner .cta-title .highlight {
+      background: rgba(255,255,255,0.20);
+      padding: 0 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+    .cta-banner .cta-text {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.95);
+      line-height: 1.7;
+      max-width: 800px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-banner .cta-text strong {
+      color: #fff;
+      font-weight: 700;
+      background: rgba(0,0,0,0.15);
+      padding: 1px 10px;
+      border-radius: 6px;
+    }
+    .cta-banner .cta-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .cta-banner .cta-tags span {
+      background: rgba(255,255,255,0.20);
+      backdrop-filter: blur(4px);
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 18px;
+      border-radius: 100px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.75rem;
+      color: #B0A0A6;
+      border-top: 1px solid #F0E2E5;
+      padding-top: 24px;
+    }
+
+    /* Стиль для кнопки оплаты WayForPay */
+    .payment-btn-wrap {
+      display: inline-block;
+    }
+    .payment-btn-wrap a {
+      display: inline-block !important;
+      background: #0488cd;
+      background-size: cover;
+      width: 256px !important;
+      height: 54px !important;
+      border: none !important;
+      border-radius: 14px !important;
+      padding: 16px !important;
+      text-decoration: none !important;
+      box-shadow: 3px 2px 8px rgba(71, 66, 66, 0.22) !important;
+      text-align: center !important;
+      outline: none !important;
+      transition: opacity 0.2s;
+      line-height: 18px !important;
+      vertical-align: middle !important;
+      box-sizing: border-box !important;
+    }
+    .payment-btn-wrap a span {
+      font-family: Verdana, Arial, sans-serif !important;
+      font-weight: bold !important;
+      font-size: 14px !important;
+      color: #ffffff !important;
+      line-height: 18px !important;
+      vertical-align: middle !important;
+    }
+    .payment-btn-wrap a:hover {
+      opacity: 0.8;
+    }
+
+    @media (max-width: 680px) {
+      h1 { font-size: 1.9rem; }
+      h2 { font-size: 1.5rem; }
+      .subhead { font-size: 1rem; }
+      .container { padding: 20px 6px 40px; }
+      .intro-box { padding: 20px 14px; }
+      .step-block { padding: 18px 14px; }
+      .step-block .theme-grid { grid-template-columns: 1fr; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .constructor-block { padding: 28px 18px; }
+      .constructor-block .sell-blocks { grid-template-columns: 1fr; }
+      .constructor-block .features { grid-template-columns: 1fr; }
+      .constructor-block .actions { flex-direction: column; align-items: stretch; }
+      .btn-primary, .btn-ghost-pink { text-align: center; }
+      .payment-btn-wrap a { width: 100% !important; max-width: 256px; margin: 0 auto; }
+      .payment-btn-wrap { display: block; text-align: center; }
+      .cta-banner { padding: 24px 18px; }
+      .cta-banner .cta-title { font-size: 1.3rem; }
+      .cta-banner .cta-text { font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- ====== ВСТУПЛЕНИЕ ====== -->
+  <div class="intro-box">
+    <div style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; color:#D4768A; font-weight:600; margin-bottom:4px;">50 готовых тем</div>
+    <h1>Контент-план <span class="highlight">по Лестнице Ханта</span></h1>
+    <p class="subhead">10 тем для каждой ступени прогрева. Бери, адаптируй под свой бренд и публикуй — без головной боли «что написать».</p>
+  </div>
+
+  <!-- ====== СТУПЕНЬ 1 — ЗАХВАТ ВНИМАНИЯ ====== -->
+  <div class="step-block s1">
+    <div class="step-head">
+      <span class="step-num">Ступень 1</span>
+      <span class="step-title">Захват внимания</span>
+    </div>
+    <div class="step-role">Остановить скролл · вызвать эмоцию · заинтриговать</div>
+    <div class="step-desc">
+      <strong>Зачем:</strong> Без захвата никто не увидит твою экспертность. Это точка входа.
+      <strong>Роль:</strong> Создаёт интерес, любопытство и первое впечатление.
+    </div>
+    <div class="theme-grid">
+      <div class="theme-item">
+        <div class="t-num">Тема №1</div>
+        <div class="t-title">Момент, когда я поняла, что живу не своей жизнью — и что я с этим сделала</div>
+        <div class="t-hook">«Я сидела на кухне, пила чай и вдруг осознала: я не живу. Я существую»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №2</div>
+        <div class="t-title">Мой самый страшный страх, который оказался иллюзией</div>
+        <div class="t-hook">«Годами я боялась этого. А когда столкнулась — поняла, что боялась зря»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №3</div>
+        <div class="t-title">День, когда я поняла, что застряла в детской позиции — и что я с этим сделала</div>
+        <div class="t-hook">«Я вела себя как девочка, хотя мне уже давно за… И это нужно было менять»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №4</div>
+        <div class="t-title">Что я делаю, чтобы сохранять ментальное здоровье в хаосе</div>
+        <div class="t-hook">«Когда мир рушится, у меня есть 3 ритуала, которые спасают»</div>
+        <div class="t-meta">Карусель / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №5</div>
+        <div class="t-title">Моя самая уязвимая точка — и как я учусь с ней жить</div>
+        <div class="t-hook">«Я долго скрывала это. Но сегодня решила сказать честно»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №6</div>
+        <div class="t-title">Что я хочу изменить в своей жизни в ближайший год — честно</div>
+        <div class="t-hook">«Без прикрас. Без "всё хорошо". Вот что я реально хочу поменять»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №7</div>
+        <div class="t-title">Откуда у меня энергия, когда всё валится из рук — мой секрет</div>
+        <div class="t-hook">«Я не пью энергетики. Мой источник энергии — вот он»</div>
+        <div class="t-meta">Рилс / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №8</div>
+        <div class="t-title">Что я поняла о любви и отношениях за годы брака</div>
+        <div class="t-hook">«Я вышла замуж не за принца. И это лучшее, что случилось со мной»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №9</div>
+        <div class="t-title">Почему я перестала ждать одобрения от близких и стала жить для себя</div>
+        <div class="t-hook">«Я так устала быть "хорошей девочкой" для всех. Теперь я — для себя»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №10</div>
+        <div class="t-title">Что меня останавливало годами — и как я наконец перестала бояться</div>
+        <div class="t-hook">«Мой самый большой внутренний тормоз. И день, когда я его сломала»</div>
+        <div class="t-meta">Рилс / Текст</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== СТУПЕНЬ 2 — ДОВЕРИЕ → АУТЕНТИЧНОСТЬ ====== -->
+  <div class="step-block s2">
+    <div class="step-head">
+      <span class="step-num">Ступень 2</span>
+      <span class="step-title">Доверие → Аутентичность</span>
+    </div>
+    <div class="step-role">Раскрыть личность · создать близость с аудиторией</div>
+    <div class="step-desc">
+      <strong>Зачем:</strong> Без доверия продажи — только через манипуляцию. С доверием — клиент идёт сам.
+      <strong>Роль:</strong> Создаёт эмоциональную связь и привязанность к тебе как к личности.
+    </div>
+    <div class="theme-grid">
+      <div class="theme-item">
+        <div class="t-num">Тема №11</div>
+        <div class="t-title">Почему я учусь каждый день — и как это меняет мою жизнь</div>
+        <div class="t-hook">«Я не могу жить без нового знания. Это мой наркотик»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №12</div>
+        <div class="t-title">Какие фильмы меня вдохновляют и почему</div>
+        <div class="t-hook">«Это не просто кино. Это мои учителя»</div>
+        <div class="t-meta">Рилс / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №13</div>
+        <div class="t-title">Почему я люблю гулять в лесу и собирать грибы — моё хобби</div>
+        <div class="t-hook">«Там, в лесу, я нахожу ответы на все вопросы»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №14</div>
+        <div class="t-title">Моё отношение ко времени и ресурсам — что я поняла</div>
+        <div class="t-hook">«Раньше я думала, что времени много. Теперь я знаю, что это не так»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №15</div>
+        <div class="t-title">Почему я люблю делать изделия из гипса и свечи — моё творчество</div>
+        <div class="t-hook">«Я создаю руками то, что не могу создать словами»</div>
+        <div class="t-meta">Рилс / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №16</div>
+        <div class="t-title">Почему я исследую новые темы в науке — моя страсть</div>
+        <div class="t-hook">«Наука — это не скучно. Это про нас, про людей, про жизнь»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №17</div>
+        <div class="t-title">Как я сохраняю устойчивое состояние психики в любой ситуации</div>
+        <div class="t-hook">«Мой внутренний стержень. Я расскажу, из чего он состоит»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №18</div>
+        <div class="t-title">Моменты, когда я чувствую, что я — там, где хочу быть</div>
+        <div class="t-hook">«Это не про деньги и статус. Это про состояние души»</div>
+        <div class="t-meta">Рилс / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №19</div>
+        <div class="t-title">Что я поняла о семье и близких за последние годы</div>
+        <div class="t-hook">«Я перестала их менять. И начала менять себя»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №20</div>
+        <div class="t-title">Почему я люблю одежду и аксессуары — моя маленькая радость</div>
+        <div class="t-hook">«Это не про шопинг. Это про самовыражение»</div>
+        <div class="t-meta">Рилс / Текст</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== СТУПЕНЬ 3 — ПРОГРЕВ → ЭКСПЕРТНОСТЬ ====== -->
+  <div class="step-block s3">
+    <div class="step-head">
+      <span class="step-num">Ступень 3</span>
+      <span class="step-title">Прогрев → Экспертность</span>
+    </div>
+    <div class="step-role">Показать, что ты разбираешься · дать полезные инструменты</div>
+    <div class="step-desc">
+      <strong>Зачем:</strong> Без пользы ты просто «ещё один блогер». С пользой — ты эксперт.
+      <strong>Роль:</strong> Создаёт доверие через знания и формирует привычку ждать твои посты.
+    </div>
+    <div class="theme-grid">
+      <div class="theme-item">
+        <div class="t-num">Тема №21</div>
+        <div class="t-title">Почему знание без действия не меняет жизнь — мой главный принцип</div>
+        <div class="t-hook">«Ты можешь прочитать 100 книг. Но если не сделаешь шаг — ничего не изменится»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №22</div>
+        <div class="t-title">Взросление — это навык, а не возраст. Вот почему</div>
+        <div class="t-hook">«Можно быть взрослым в 25. А можно оставаться девочкой в 45»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №23</div>
+        <div class="t-title">Как мои клиентки понимают, где именно застряли и почему</div>
+        <div class="t-hook">«Я не даю готовые ответы. Я даю инструмент, чтобы найти свой»</div>
+        <div class="t-meta">Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №24</div>
+        <div class="t-title">Почему я создаю поддерживающую среду для своих клиенток</div>
+        <div class="t-hook">«Без поддержки сложно меняться. Я это знаю по себе»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №25</div>
+        <div class="t-title">Как мои клиентки перестают ждать и начинают действовать</div>
+        <div class="t-hook">«Самый частый запрос: "Я хочу, но боюсь". И у меня есть ответ»</div>
+        <div class="t-meta">Карусель / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №26</div>
+        <div class="t-title">Мои инструменты — лёгкие и эффективные. Вот как они работают</div>
+        <div class="t-hook">«Я не люблю сложное. Я люблю работающее»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №27</div>
+        <div class="t-title">Каждый идёт в своём темпе развития — и это нормально</div>
+        <div class="t-hook">«Не сравнивай себя с другими. Сравнивай себя с собой вчерашней»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №28</div>
+        <div class="t-title">Как мои клиентки меняют свою идентичность и жизнь</div>
+        <div class="t-hook">«Она пришла ко мне как "жертва", а ушла как "автор своей жизни"»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №29</div>
+        <div class="t-title">Почему инновационные знания — основа моего продукта</div>
+        <div class="t-hook">«Я не использую устаревшие методы. Я иду в ногу с наукой»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №30</div>
+        <div class="t-title">Как мои клиентки учатся заканчивать, а не бросать на полпути</div>
+        <div class="t-hook">«Самое сложное — не начать. Самое сложное — довести до конца. И я знаю, как этому научить»</div>
+        <div class="t-meta">Карусель / Рилс</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== СТУПЕНЬ 4 — ЖЕЛАНИЕ КУПИТЬ ====== -->
+  <div class="step-block s4">
+    <div class="step-head">
+      <span class="step-num">Ступень 4</span>
+      <span class="step-title">Желание купить</span>
+    </div>
+    <div class="step-role">Показать трансформацию · результаты клиентов · дать оффер</div>
+    <div class="step-desc">
+      <strong>Зачем:</strong> Мост между «я тебе верю» и «я готов купить».
+      <strong>Роль:</strong> Создаёт эмоцию «хочу так же» и закрепляет статус эксперта.
+    </div>
+    <div class="theme-grid">
+      <div class="theme-item">
+        <div class="t-num">Тема №31</div>
+        <div class="t-title">Кейс: как моя клиентка перестала ждать и начала действовать</div>
+        <div class="t-hook">«Она пришла с запросом "я хочу, но боюсь". А ушла с результатом. Вот как это было»</div>
+        <div class="t-meta">Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №32</div>
+        <div class="t-title">Как моя клиентка изменила свою идентичность и жизнь</div>
+        <div class="t-hook">«Она была "удобной девочкой" для всех. Теперь она — взрослая женщина. И это изменило всё»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №33</div>
+        <div class="t-title">Почему я помогаю женщинам дорастить этапы Эриксона — моя миссия</div>
+        <div class="t-hook">«Я знаю, что такое застрять в детстве. И я знаю, как из этого выйти»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №34</div>
+        <div class="t-title">Кейс: как клиентка поняла, где именно застряла и почему</div>
+        <div class="t-hook">«Она искала ответы годами. А нашла их за месяц работы со мной»</div>
+        <div class="t-meta">Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №35</div>
+        <div class="t-title">Как мои клиентки учатся заканчивать, а не бросать на полпути</div>
+        <div class="t-hook">«Бросить легко. Довести до конца — сложно. И я учу этому»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №36</div>
+        <div class="t-title">Как я даю ключи контроля за результат в руки клиентки</div>
+        <div class="t-hook">«Я не делаю работу за тебя. Я даю инструменты, чтобы ты сделала её сама»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №37</div>
+        <div class="t-title">Результат работы со мной — уверенность, что достигнешь чего угодно</div>
+        <div class="t-hook">«Мои клиентки знают: если они захотят — они смогут. И это самое ценное»</div>
+        <div class="t-meta">Карусель / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №38</div>
+        <div class="t-title">Новая идентичность — это новый статус и новые возможности</div>
+        <div class="t-hook">«Когда ты перестаёшь быть "девочкой" и становишься "взрослой" — мир открывается по-новому»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №39</div>
+        <div class="t-title">Уважение от себя и других — результат работы со мной</div>
+        <div class="t-hook">«Мои клиентки перестают искать одобрения. Они начинают уважать себя»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №40</div>
+        <div class="t-title">Мой оффер: что я предлагаю и кому это нужно</div>
+        <div class="t-hook">«Вот мой продукт. Вот для кого он. Вот что вы получите. Без воды»</div>
+        <div class="t-meta">Карусель</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== СТУПЕНЬ 5 — ПОКУПКА ====== -->
+  <div class="step-block s5">
+    <div class="step-head">
+      <span class="step-num">Ступень 5</span>
+      <span class="step-title">Покупка</span>
+    </div>
+    <div class="step-role">Клиент совершает покупку</div>
+    <div class="step-desc">
+      <strong>Зачем:</strong> После оффера на 4-й ступени покупка становится естественным шагом.
+      <strong>Роль:</strong> Завершает путь клиента и создаёт уважение через чёткий и простой процесс.
+    </div>
+    <div class="theme-grid">
+      <div class="theme-item">
+        <div class="t-num">Тема №41</div>
+        <div class="t-title">Как оформить заказ за 2 минуты — пошаговая инструкция</div>
+        <div class="t-hook">«Никакой сложности. Всё просто и понятно»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №42</div>
+        <div class="t-title">Что вы получите сразу после оплаты — и что будет дальше</div>
+        <div class="t-hook">«Я не бросаю клиентов. Я веду их за руку от начала до результата»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №43</div>
+        <div class="t-title">Почему мои клиенты быстро получают результаты — моя система</div>
+        <div class="t-hook">«Я не трачу твоё время. Я даю чёткие шаги. И они работают»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №44</div>
+        <div class="t-title">Моя гарантия — почему я отвечаю за результат</div>
+        <div class="t-hook">«Я не боюсь ответственности. Потому что я знаю: мой метод работает»</div>
+        <div class="t-meta">Текст / Карусель</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №45</div>
+        <div class="t-title">Почему 80% моих клиентов приходят по рекомендации</div>
+        <div class="t-hook">«Сарафанное радио — лучшая реклама. И я горжусь этим»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №46</div>
+        <div class="t-title">Что делать, если у вас возникли вопросы после покупки — моя поддержка</div>
+        <div class="t-hook">«Я всегда на связи. Вы не останетесь один на один с проблемой»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №47</div>
+        <div class="t-title">Почему вам стоит работать именно со мной — 3 причины</div>
+        <div class="t-hook">«Я не лучше других. Я просто другая. И это моя сила»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №48</div>
+        <div class="t-title">Моя философия — почему я делаю то, что делаю</div>
+        <div class="t-hook">«Я верю, что каждая женщина может жить из позиции взрослой. И я помогаю это сделать»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №49</div>
+        <div class="t-title">Как я провожу клиента от оплаты до результата — полная схема</div>
+        <div class="t-hook">«Шаг за шагом. Без хаоса. Без страха»</div>
+        <div class="t-meta">Карусель / Текст</div>
+      </div>
+      <div class="theme-item">
+        <div class="t-num">Тема №50</div>
+        <div class="t-title">Почему я верю в свой продукт — личная история</div>
+        <div class="t-hook">«Я создавала это не для денег. Я создавала это, потому что сама через это прошла»</div>
+        <div class="t-meta">Текст / Рилс</div>
+      </div>
+    </div>
+  </div>
+
+  <hr />
+
+  <!-- ====== ИТОГ ====== -->
+  <div class="section" style="background:#FDF1F2; border-radius:20px; padding:28px 24px;">
+    <h2 style="margin-top:0;">Как пользоваться этим списком</h2>
+    <div class="grid-2">
+      <div>
+        <p style="font-weight:600; color:#1F1A1C;">1. Бери любую тему</p>
+        <p style="color:#3D3035; font-size:0.95rem;">Не обязательно по порядку. Главное — чередовать ступени, чтобы клиент проходил весь путь.</p>
+        <p style="font-weight:600; color:#1F1A1C; margin-top:12px;">2. Адаптируй под себя</p>
+        <p style="color:#3D3035; font-size:0.95rem;">Подставь свою историю, своих клиентов, свой опыт. Универсальность — в структуре, а не в тексте.</p>
+      </div>
+      <div>
+        <p style="font-weight:600; color:#1F1A1C;">3. Публикуй системно</p>
+        <p style="color:#3D3035; font-size:0.95rem;">50 тем — это плотный контент-план. Выбирай те, которые резонируют с твоей аудиторией.</p>
+        <p style="font-weight:600; color:#1F1A1C; margin-top:12px;">4. Следи за реакцией</p>
+        <p style="color:#3D3035; font-size:0.95rem;">Какая ступень даёт больше отклика? На какой люди пишут в личку? Усиливай её.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== ЯРКИЙ БЛОК ПРОДАЖИ ====== -->
+  <div class="constructor-block">
+    <div class="badge">🔥 Только для тех, кто хочет большего</div>
+
+    <h2>Поздравляю! Теперь ты <span class="highlight">входишь в маленький процент</span> тех, кто будет делать контент с полным пониманием процесса прогрева.</h2>
+
+    <div class="sell-blocks">
+      <div class="sell-block">
+        <span class="emoji-big">🧩</span>
+        <h4>Прогрев — это многогранник</h4>
+        <p>Ты теперь знаешь, что прогрев должен быть многогранным. И <strong>Лестница Ханта</strong> — это <strong>одна грань</strong>.</p>
+        <p style="margin-top:6px;"><strong>Остальные грани — это Лояльность, Экспертность, Ценности и Аутентичность.</strong> И тогда человек прогревается к тебе как к личности и начинает <strong>любить</strong> тебя.</p>
+      </div>
+
+      <div class="sell-block">
+        <span class="emoji-big">💎</span>
+        <h4>Глубину знают единицы</h4>
+        <p>Многие эксперты не знают глубины своей Аутентичности. Поэтому нужно сначала сформировать понимание и задать себе <strong>много вопросов</strong>. Этими знаниями обладают <strong>единицы</strong>.</p>
+        <p style="margin-top:6px;">И мы видим, как их контент <strong>«гладко стелется»</strong> и нам самим приятно за ними наблюдать. Мы сами высоко лояльны к таким блогерам.</p>
+      </div>
+
+      <div class="sell-block">
+        <span class="emoji-big">🚀</span>
+        <h4>Теперь это доступно тебе</h4>
+        <p>А они просто чередуют свой <strong>однажды сформированный контент-пулл</strong> из тех самых вопросов.</p>
+        <p style="margin-top:6px; font-weight:600;">Сейчас это всё доступно и тебе.</p>
+        <p style="margin-top:4px;">Я создала для тебя <strong>конструктор контент-стратегии</strong>. ИИ сделает для тебя опрос из <strong>20 вопросов</strong> и сам сгенерирует тебе контент на <strong>365 дней</strong>, который не повторяется и уже построен по принципу ступеней Ханта.</p>
+      </div>
+    </div>
+
+    <!-- ===== НОВАЯ ЯРКАЯ ПЛАШКА-ПРИЗЫВ ===== -->
+    <div class="cta-banner">
+      <div class="cta-title">🚀 <span class="highlight">Сейчас это всё доступно и тебе.</span></div>
+      <div class="cta-text">
+        Я создала для тебя <strong>конструктор контент-стратегии</strong>. ИИ сделает для тебя опрос из <strong>20 вопросов</strong> и сам сгенерирует тебе контент на <strong>365 дней</strong>, который не повторяется и уже построен по принципу ступеней Ханта.<br>
+        Прочитай об этом подробнее или покупай сразу. Но это <strong>100% облегчит твою контент-подготовку</strong>.
+      </div>
+      <div class="cta-tags">
+        <span>🧠 20 вопросов</span>
+        <span>📅 365 дней</span>
+        <span>🎯 Без повторений</span>
+        <span>⚡ Экономия времени</span>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <span class="emoji">🧠</span>
+        <strong>20 вопросов</strong>
+        <span>ИИ подберёт их специально под твой бренд</span>
+      </div>
+      <div class="feature">
+        <span class="emoji">📅</span>
+        <strong>365 дней</strong>
+        <span>Готовый контент-план на год вперёд</span>
+      </div>
+      <div class="feature">
+        <span class="emoji">🎯</span>
+        <strong>Без повторений</strong>
+        <span>Каждый день — новый, продуманный шаг</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <!-- Кнопка оплаты WayForPay -->
+      <div class="payment-btn-wrap">
+        <a href="https://secure.wayforpay.com/button/bcff4916fdde1" target="_blank" onmouseover="this.style.opacity='0.8';" onmouseout="this.style.opacity='1';">
+          <span>Купить за $7</span>
+        </a>
+      </div>
+      <a href="3.html" class="btn-ghost-pink">Узнать подробнее про Генератор Контента</a>
+    </div>
+    <div class="price-note">💎 <strong>Всего $7</strong> — можно сразу приступить к интервью с ИИ</div>
+  </div>
+
+  <div class="footer">
+    © 2026 · Лестница Ханта · 50 тем для контента
+  </div>
+
+</div>
+</body>
+</html>
