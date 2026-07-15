@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>29 архетипов для захвата внимания — 1-я ступень Ханта</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #FDF8F9;
+            color: #1F1A1C;
+            padding: 40px 20px;
+            min-height: 100vh;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+            background: #fff;
+            padding: 16px 20px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(212, 118, 138, 0.06);
+            border: 1px solid #f0e2e5;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            padding: 8px 18px;
+            border-radius: 30px;
+            background: #FDF1F2;
+            color: #1F1A1C;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
+        }
+
+        .nav-links a:hover {
+            background: #D4768A;
+            color: #fff;
+            border-color: #D4768A;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(212, 118, 138, 0.3);
+        }
+
+        .nav-links a.active {
+            background: #D4768A;
+            color: #fff;
+            border-color: #D4768A;
+        }
+
+        /* ===== ШАПКА ===== */
+        .hero {
+            background: linear-gradient(135deg, #fdf1f2, #f8e8ea, #fdf5f5);
+            border-radius: 24px;
+            padding: 48px 40px 40px;
+            margin-bottom: 40px;
+            border: 2px solid #f0e2e5;
+            box-shadow: 0 8px 30px rgba(212, 118, 138, 0.08);
+        }
+
+        .hero .badge {
+            display: inline-block;
+            background: #D4768A;
+            color: #fff;
+            font-weight: 700;
+            font-size: 0.7rem;
+            padding: 4px 18px;
+            border-radius: 20px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.1;
+            color: #1F1A1C;
+        }
+
+        .hero h1 .highlight {
+            color: #D4768A;
+        }
+
+        .hero .subhead {
+            font-size: 1.15rem;
+            color: #5A4A50;
+            font-weight: 400;
+            margin-top: 8px;
+            max-width: 700px;
+        }
+
+        .hero .subhead strong {
+            color: #D4768A;
+        }
+
+        /* ===== ОБЩАЯ ИНФОРМАЦИЯ ===== */
+        .summary {
+            background: #fff;
+            border-radius: 18px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(212, 118, 138, 0.06);
+            border-left: 5px solid #D4768A;
+        }
+
+        .summary h2 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-bottom: 12px;
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+        }
+
+        .summary-item {
+            background: #FDF1F2;
+            border-radius: 12px;
+            padding: 14px 18px;
+            border-left: 4px solid #D4768A;
+        }
+
+        .summary-item .label {
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #8A7A80;
+        }
+
+        .summary-item .value {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-top: 2px;
+        }
+
+        /* ===== ПРИНЦИП ===== */
+        .principle-box {
+            background: linear-gradient(135deg, #fff, #fdf1f2);
+            border-radius: 18px;
+            padding: 28px 32px;
+            margin-bottom: 40px;
+            border: 2px solid #D4768A;
+            box-shadow: 0 4px 20px rgba(212, 118, 138, 0.08);
+        }
+
+        .principle-box .emoji-big {
+            font-size: 2.2rem;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        .principle-box h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #1F1A1C;
+        }
+
+        .principle-box h2 .highlight {
+            color: #D4768A;
+        }
+
+        .principle-box p {
+            color: #3D3035;
+            font-size: 0.98rem;
+            line-height: 1.7;
+            margin-top: 8px;
+        }
+
+        .principle-box .key-idea {
+            background: #fff;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 14px;
+            border-left: 4px solid #D4768A;
+            font-style: italic;
+            color: #1F1A1C;
+            font-weight: 500;
+        }
+
+        /* ===== СТРАТЕГИЯ ===== */
+        .strategy-box {
+            background: #fff;
+            border-radius: 18px;
+            padding: 24px 28px;
+            margin-bottom: 40px;
+            box-shadow: 0 4px 20px rgba(212, 118, 138, 0.06);
+            border: 1px solid #f0e2e5;
+        }
+
+        .strategy-box h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-bottom: 10px;
+        }
+
+        .strategy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .strategy-item {
+            background: #FDF1F2;
+            border-radius: 10px;
+            padding: 10px 14px;
+            text-align: center;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #1F1A1C;
+        }
+
+        .strategy-item .emoji {
+            display: block;
+            font-size: 1.4rem;
+        }
+
+        /* ===== БЛОК АРХЕТИПОВ ===== */
+        .block {
+            margin-bottom: 50px;
+        }
+
+        .block-title {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 18px 24px;
+            border-radius: 14px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .block-title .emoji {
+            font-size: 1.6rem;
+        }
+
+        .block-title .count {
+            font-size: 0.7rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.25);
+            padding: 2px 14px;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+
+        /* Цвета блоков */
+        .block.fear .block-title {
+            background: linear-gradient(135deg, #E8A0BF, #D4768A);
+        }
+
+        .block.desire .block-title {
+            background: linear-gradient(135deg, #7EC8E3, #4A9BB5);
+        }
+
+        .block.frustration .block-title {
+            background: linear-gradient(135deg, #F0B429, #D49A1A);
+        }
+
+        .block.transformation .block-title {
+            background: linear-gradient(135deg, #7BC8A4, #4A9B7A);
+        }
+
+        .block.instincts .block-title {
+            background: linear-gradient(135deg, #B8A9C9, #8A7AB0);
+        }
+
+        .block.meaning .block-title {
+            background: linear-gradient(135deg, #C49A8A, #A87A6A);
+        }
+
+        /* ===== ОПИСАНИЕ КАТЕГОРИИ ===== */
+        .category-desc {
+            background: #fff;
+            border-radius: 14px;
+            padding: 18px 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #D4768A;
+            color: #3D3035;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            box-shadow: 0 2px 12px rgba(212, 118, 138, 0.04);
+        }
+
+        .category-desc strong {
+            color: #1F1A1C;
+        }
+
+        /* ===== ТАБЛИЦА ===== */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(212, 118, 138, 0.06);
+            margin-bottom: 10px;
+        }
+
+        thead tr {
+            background: #FDF1F2;
+            border-bottom: 2px solid #f0e2e5;
+        }
+
+        th {
+            padding: 14px 18px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: #1F1A1C;
+            letter-spacing: 0.02em;
+        }
+
+        td {
+            padding: 14px 18px;
+            border-bottom: 1px solid #f0e2e5;
+            vertical-align: top;
+        }
+
+        tbody tr {
+            transition: background-color 0.2s ease;
+        }
+
+        tbody tr:hover {
+            background-color: #fdf8f9;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .archetype-name {
+            font-weight: 700;
+            color: #1F1A1C;
+            width: 22%;
+            min-width: 160px;
+            font-size: 0.95rem;
+        }
+
+        .archetype-name .sub {
+            font-weight: 400;
+            font-size: 0.75rem;
+            color: #8A7A80;
+            display: block;
+            margin-top: 2px;
+        }
+
+        .hook-number {
+            background: #FDF1F2;
+            padding: 2px 12px;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #8A7A80;
+            display: inline-block;
+            margin-right: 10px;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .hook-text {
+            color: #3D3035;
+            line-height: 1.6;
+            font-size: 0.92rem;
+        }
+
+        .hook-cell {
+            background: #faf8f8;
+        }
+
+        .hooks-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .single-hook {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .hook-explanation {
+            font-size: 0.78rem;
+            color: #8A7A80;
+            padding-left: 36px;
+            font-style: italic;
+            line-height: 1.5;
+        }
+
+        /* ===== ФУТЕР ===== */
+        .footer {
+            background: #fff;
+            border-radius: 18px;
+            padding: 32px 36px;
+            margin-top: 50px;
+            border: 2px solid #f0e2e5;
+            box-shadow: 0 4px 20px rgba(212, 118, 138, 0.06);
+            text-align: center;
+        }
+
+        .footer h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #1F1A1C;
+            margin-bottom: 10px;
+        }
+
+        .footer p {
+            color: #3D3035;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .footer .highlight {
+            color: #D4768A;
+            font-weight: 600;
+        }
+
+        .footer .rule {
+            background: #FDF1F2;
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-top: 16px;
+            border-left: 4px solid #D4768A;
+            font-weight: 500;
+            color: #1F1A1C;
+        }
+
+        /* ===== АДАПТИВ ===== */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+
+            .block-title {
+                font-size: 1.2rem;
+                padding: 14px 18px;
+            }
+
+            table {
+                font-size: 0.85rem;
+            }
+
+            th, td {
+                padding: 10px 12px;
+            }
+
+            .archetype-name {
+                min-width: 120px;
+                font-size: 0.85rem;
+            }
+
+            .summary-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .strategy-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .nav-links a {
+                font-size: 0.75rem;
+                padding: 6px 14px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .strategy-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .principle-box {
+                padding: 20px 16px;
+            }
+
+            .nav-links a {
+                font-size: 0.7rem;
+                padding: 4px 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+        <!-- ===== НАВИГАЦИЯ ПО СТУПЕНЯМ ===== -->
+        <div class="nav-links">
+            <a href="hant_1.html" class="active">1. Внимание</a>
+            <a href="hant_2.html">2. Доверие</a>
+            <a href="hant_3.html">3. Прогрев</a>
+            <a href="hant_4.html">4. Желание</a>
+            <a href="hant_5.html">5. Покупка</a>
+        </div>
+
+        <!-- ===== ШАПКА ===== -->
+        <div class="hero">
+            <div class="badge">🎯 1-я ступень Лестницы Ханта</div>
+            <h1>29 архетипов для <span class="highlight">захвата внимания</span></h1>
+            <p class="subhead">
+                Мгновенное узнавание + остановка скролла. <strong>58+ готовых хуков</strong>, которые работают на эмоциях страха, желания, фрустрации, трансформации, инстинктов и смысла.
+            </p>
+        </div>
+
+        <!-- ===== ОБЩАЯ ИНФОРМАЦИЯ ===== -->
+        <div class="summary">
+            <h2>📊 Общая информация</h2>
+            <div class="summary-grid">
+                <div class="summary-item">
+                    <div class="label">Всего архетипов</div>
+                    <div class="value">29</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Готовых хуков</div>
+                    <div class="value">58+</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Категорий контента</div>
+                    <div class="value">6</div>
+                </div>
+                <div class="summary-item">
+                    <div class="label">Для кого</div>
+                    <div class="value">80% экспертных блогов</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== ПРИНЦИП ===== -->
+        <div class="principle-box">
+            <span class="emoji-big">💡</span>
+            <h2>Главный принцип <span class="highlight">1-й ступени</span></h2>
+            <p>
+                На этапе <strong>захвата внимания</strong> ты <strong>НЕ предлагаешь решение</strong>. Ты демонстрируешь <strong>глубокое понимание</strong> боли, желания или фрустрации своей аудитории.
+            </p>
+            <div class="key-idea">
+                «Я тебя понимаю. Я такая же, как ты. Я тоже через это проходила».
+            </div>
+            <p style="margin-top:12px;">
+                Решение, методология и оффер приходят <strong>только на следующих ступенях</strong> (Доверие, Прогрев, Желание, Покупка). На 1-й ступени — только <strong>узнавание и резонанс</strong>.
+            </p>
+        </div>
+
+        <!-- ===== СТРАТЕГИЯ ===== -->
+        <div class="strategy-box">
+            <h3>🧩 Рекомендуемая стратегия контента</h3>
+            <p style="color:#3D3035; font-size:0.92rem; margin-bottom:12px;">
+                <strong>Чередуй архетипы</strong> по дням/неделям. Не публикуй 3 поста подряд на одну категорию — разнообразие держит аудиторию в тонусе.
+            </p>
+            <div class="strategy-grid">
+                <div class="strategy-item"><span class="emoji">😨</span>Страх</div>
+                <div class="strategy-item"><span class="emoji">😂</span>Юмор</div>
+                <div class="strategy-item"><span class="emoji">🌟</span>Желание</div>
+                <div class="strategy-item"><span class="emoji">😤</span>Фрустрация</div>
+                <div class="strategy-item"><span class="emoji">🦋</span>Трансформация</div>
+                <div class="strategy-item"><span class="emoji">🔮</span>Смысл</div>
+            </div>
+            <p style="color:#8A7A80; font-size:0.8rem; margin-top:10px;">
+                Пример недели: Страх → Юмор → Желание → Фрустрация → Трансформация → Страх → Смысл
+            </p>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 1: СТРАХ -->
+        <!-- ============================================================ -->
+        <div class="block fear">
+            <div class="block-title">
+                <span class="emoji">😨</span> СТРАХ
+                <span class="count">12 архетипов</span>
+            </div>
+            <div class="category-desc">
+                <strong>Зачем использовать страх на 1-й ступени:</strong> Страх — один из самых сильных эмоциональных триггеров. Он заставляет человека <strong>остановиться</strong>, потому что он <strong>узнаёт себя</strong>. Когда ты говоришь о страхе, ты говоришь на языке рептильного мозга — мгновенно, без барьеров.
+                <br><br>
+                <strong>Как использовать:</strong> Ты не пугаешь клиента. Ты <strong>показываешь</strong>, что тоже через это прошёл(а). Это создаёт <strong>доверие и близость</strong>. Страх — это мостик к эмпатии.
+                <br><br>
+                <strong>Важно:</strong> На 1-й ступени ты <strong>не даёшь решение</strong>! Ты просто говоришь: «Я знаю эту боль. Я была там же».
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архетип</th>
+                        <th>Хуки и объяснение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 1. Страх потери -->
+                    <tr>
+                        <td class="archetype-name">
+                            1. Страх потери
+                            <span class="sub">(утраты, расставания, банкротства)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Тот день, когда я понял(а), что могу потерять всё — и как я с этим живу дальше»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Заставляет вспомнить свой страх потери. Узнавание себя.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Я перестал(а) бояться, что меня бросят / уволят / обанкротят. Вот что мне помогло»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Показывает трансформацию страха — даёт надежду, но без решения.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 2. Страх отвержения -->
+                    <tr>
+                        <td class="archetype-name">
+                            2. Страх отвержения
+                            <span class="sub">(изоляции, одиночества)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Момент, когда я понял(а), что я „лишний(я)" в компании друзей. И что я сделал(а)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Эволюционный страх — быть изгоем. Самый сильный триггер.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) угождать всем, чтобы меня приняли — и стала счастливее»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Показывает выход из паттерна «быть удобным».
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 3. Страх бедности -->
+                    <tr>
+                        <td class="archetype-name">
+                            3. Страх бедности
+                            <span class="sub">(нехватки, дефицита)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Что я делаю, когда ловлю себя на мысли: „У меня не хватит денег даже на мечту"»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Базовый страх выживания. Касается 99% людей.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я перестал(а) жить в режиме „экономия на всём" и разрешил(а) себе дышать»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Показывает выход из ментальной ловушки бедности.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 4. Страх боли -->
+                    <tr>
+                        <td class="archetype-name">
+                            4. Страх боли
+                            <span class="sub">(физической и эмоциональной)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Мой самый тяжёлый эмоциональный день — и как я выбрался(лась) из этой ямы»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Уязвимость создаёт доверие. Показывает, что ты живой человек.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Когда я хотел(а) всё бросить из-за выгорания — и что меня остановило»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Актуально для экспертов. Узнавание профессиональной боли.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 5. Страх упущенной выгоды (FOMO) -->
+                    <tr>
+                        <td class="archetype-name">
+                            5. Страх упущенной выгоды
+                            <span class="sub">(FOMO)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Почему я перестал(а) листать ленту в 3 часа ночи (и как я борюсь с FOMO)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Тема, которая касается каждого, кто в соцсетях.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Что я осознал(а), когда все поехали в отпуск, а я — нет»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Показывает, что быть «не как все» — нормально.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 6. Страх посредственности -->
+                    <tr>
+                        <td class="archetype-name">
+                            6. Страх посредственности
+                            <span class="sub">(быть «как все»)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Мой страх, что я проживу обычную жизнь и никто не запомнит моего имени»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Глубинный экзистенциальный страх. Цепляет амбициозных.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) бояться выделяться и начал(а) говорить правду в лицо»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Показывает силу аутентичности.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 7. Страх ответственности -->
+                    <tr>
+                        <td class="archetype-name">
+                            7. Страх ответственности
+                            <span class="sub">(выбора, решений)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Как я выбирал(а) между стабильностью и риском — и не жалею об этом»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Вечная дилемма. Узнавание себя в выборе.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я боюсь принимать решения, которые повлияют на других — и как я с этим справляюсь»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Актуально для тех, кто отвечает за других.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 8. Страх неизвестности -->
+                    <tr>
+                        <td class="archetype-name">
+                            8. Страх неизвестности
+                            <span class="sub">(будущего, неопределённости)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Как я перестал(а) бояться будущего и что мне в этом помогло (без воды)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Сейчас актуально для всех. Неопределённость — главный страх XXI века.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Мой ритуал на случай, когда я просыпаюсь и не знаю, что будет завтра»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Даёт ощущение контроля в хаосе.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 9. Страх ошибки -->
+                    <tr>
+                        <td class="archetype-name">
+                            9. Страх ошибки
+                            <span class="sub">(сделать не так)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Моя самая большая ошибка в карьере — и почему я ей благодарен(на)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Переосмысление ошибки. Показывает рост и зрелость.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Когда мне кажется, что я всё делаю неправильно — мой личный ритуал спасения»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Синдром самозванца. Касается 99% экспертов.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 10. Страх неудачи -->
+                    <tr>
+                        <td class="archetype-name">
+                            10. Страх неудачи
+                            <span class="sub">(провала)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Мой провал, после которого я думал(а), что всё кончено. Спойлер: не кончено»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Даёт надежду. Показывает, что провал — не точка.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я перестал(а) бояться, что у меня ничего не выйдет — и просто начал(а) делать»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Мотивация через личный пример.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 11. Страх осуждения -->
+                    <tr>
+                        <td class="archetype-name">
+                            11. Страх осуждения                            <span class="sub">(чужого мнения)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Как я перестал(а) бояться, что меня осудят за мои решения — и стала свободнее»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Социальный страх. Один из самых сильных.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) спрашивать „а что подумают другие" и начала жить для себя»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Путь к свободе и аутентичности.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 12. Страх потери контроля -->
+                    <tr>
+                        <td class="archetype-name">
+                            12. Страх потери контроля
+                            <span class="sub">(когда всё идёт не по плану)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«День, когда моя жизнь пошла не по плану — и я отпустил(а) контроль»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Актуально для перфекционистов и контрол-фриков.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) всё контролировать и наконец-то выдохнул(а)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Показывает, что отпускание контроля — это свобода.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 2: ЖЕЛАНИЕ -->
+        <!-- ============================================================ -->
+        <div class="block desire">
+            <div class="block-title">
+                <span class="emoji">🌟</span> ЖЕЛАНИЕ
+                <span class="count">5 архетипов</span>
+            </div>
+            <div class="category-desc">
+                <strong>Зачем использовать желание на 1-й ступени:</strong> Желание — это <strong>надежда</strong>. Оно показывает человеку, <strong>кем он может стать</strong>. Это не про боль, а про <strong>стремление</strong>.
+                <br><br>
+                <strong>Как использовать:</strong> Ты показываешь, что <strong>ты уже там</strong>, куда хочет прийти твой клиент. Ты — <strong>живое доказательство</strong>, что это возможно.
+                <br><br>
+                <strong>Важно:</strong> Ты не говоришь «купи мою программу». Ты говоришь: «Посмотри, что возможно. Я — пример».
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архетип</th>
+                        <th>Хуки и объяснение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 13. Свобода -->
+                    <tr>
+                        <td class="archetype-name">
+                            13. Свобода
+                            <span class="sub">(независимость, выбор)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Что я сделал(а), когда понял(а), что моя жизнь принадлежит не мне, а обязательствам»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Освобождение от «надо». Мечта каждого.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я перестал(а) жить по чужим правилам и начал(а) строить свою реальность»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Создание своей жизни. Сильный вдохновляющий посыл.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 14. Статус -->
+                    <tr>
+                        <td class="archetype-name">
+                            14. Статус / Признание
+                            <span class="sub">(уважение, влияние)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Момент, когда я понял(а), что меня недооценивают — и что я с этим сделал(а)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Желание быть замеченным. Базовое для лидеров.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) ждать, пока меня заметят — и начал(а) заявлять о себе»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Проактивность и самооценка.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 15. Любовь -->
+                    <tr>
+                        <td class="archetype-name">
+                            15. Любовь / Принадлежность
+                            <span class="sub">(близость, связь)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Как я перестал(а) искать любовь в других и нашла её в себе»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Самая глубокая потребность. Работает на 100%.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) бояться одиночества и полюбил(а) своё общество»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Здоровые отношения с собой — основа всего.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 16. Изобилие -->
+                    <tr>
+                        <td class="archetype-name">
+                            16. Изобилие
+                            <span class="sub">(ресурсы, возможности)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Почему я разрешил(а) себе тратить больше и жить лучше — и не чувствовать вину»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Снятие запрета на богатство. Революционная мысль.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я перестал(а) думать, что „денег нет" — и начал(а) притягивать возможности»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Смена мышления с дефицита на изобилие.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 17. Величие -->
+                    <tr>
+                        <td class="archetype-name">
+                            17. Величие
+                            <span class="sub">(след, миссия)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Мой страх, что я проживу обычную жизнь — и как я с ним борюсь каждый день»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Экзистенциальный драйв. Для тех, кто хочет большего.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я не хочу быть „как все" и что я делаю, чтобы оставить след»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Призвание и наследие.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 3: ФРУСТРАЦИЯ -->
+        <!-- ============================================================ -->
+        <div class="block frustration">
+            <div class="block-title">
+                <span class="emoji">😤</span> ФРУСТРАЦИЯ
+                <span class="count">4 архетипа</span>
+            </div>
+            <div class="category-desc">
+                <strong>Зачем использовать фрустрацию на 1-й ступени:</strong> Фрустрация вызывает <strong>ярость, раздражение и желание перемен</strong>. Это энергия, которая толкает к действиям.
+                <br><br>
+                <strong>Как использовать:</strong> Ты говоришь о том, что <strong>бесит тебя и твою аудиторию</strong>. Ты становишься голосом их возмущения. Это создаёт <strong>общего врага</strong> и объединяет.
+                <br><br>
+                <strong>Важно:</strong> Ты не просто жалуешься. Ты показываешь, что <strong>устал(а) терпеть</strong> и готов(а) к переменам.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архетип</th>
+                        <th>Хуки и объяснение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 18. Несправедливость -->
+                    <tr>
+                        <td class="archetype-name">
+                            18. Несправедливость
+                            <span class="sub">(нечестность, перекос)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Что меня бесит в моей сфере больше всего — и почему я молчать больше не могу»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Резонансная тема. Объединяет против общей несправедливости.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Три вещи, которые несправедливы в нашем мире — и что я с этим делаю»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Переход от жалобы к действию.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 19. Глупость -->
+                    <tr>
+                        <td class="archetype-name">
+                            19. Глупость / Невежество
+                            <span class="sub">(поверхностность, отсутствие глубины)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Три мифа в моей профессии, от которых меня тошнит»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Показывает твою экспертность через отрицание глупости.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему все такие поверхностные и как я перестал(а) этому удивляться»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Усталость от инфошума. Узнавание.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 20. Хаос -->
+                    <tr>
+                        <td class="archetype-name">
+                            20. Хаос (беспорядок)
+                            <span class="sub">(отсутствие системы)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Почему я больше не могу жить в режиме „как-нибудь" и что я с этим делаю»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Актуально для всех, кто устал от хаоса.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Мой путь от полного хаоса в делах к системности (без занудства)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Трансформация через системность.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 21. Лицемерие -->
+                    <tr>
+                        <td class="archetype-name">
+                            21. Лицемерие
+                            <span class="sub">(фальшь, неискренность)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Вот почему я перестал(а) читать блогеров, которые врут»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Аутентичность — твой козырь. Ты говоришь правду.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Раздражение на фальшь и как я выбираю только искренних людей»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Декларация твоих ценностей.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 4: ТРАНСФОРМАЦИЯ -->
+        <!-- ============================================================ -->
+        <div class="block transformation">
+            <div class="block-title">
+                <span class="emoji">🦋</span> ТРАНСФОРМАЦИЯ
+                <span class="count">3 архетипа</span>
+            </div>
+            <div class="category-desc">
+                <strong>Зачем использовать трансформацию на 1-й ступени:</strong> Трансформация — это <strong>история преодоления</strong>. Она даёт <strong>надежду и вдохновение</strong>.
+                <br><br>
+                <strong>Как использовать:</strong> Ты показываешь свой путь — <strong>от боли к силе, от страха к свободе</strong>. Ты — <strong>живой пример</strong> того, что перемены возможны.
+                <br><br>
+                <strong>Важно:</strong> На 1-й ступени ты показываешь <strong>свой путь</strong>, а не путь клиента. Ты — доказательство.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архетип</th>
+                        <th>Хуки и объяснение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 22. Перерождение -->
+                    <tr>
+                        <td class="archetype-name">
+                            22. Перерождение
+                            <span class="sub">(новая версия себя)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Как я решил(а) разрушить свою старую жизнь и построить новую — с нуля»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Тотальная трансформация. Вдохновляет на перемены.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Тот момент, когда я понял(а), что старой версии меня больше нет»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Осознание собственного роста.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 23. Победа над собой -->
+                    <tr>
+                        <td class="archetype-name">
+                            23. Победа над собой
+                            <span class="sub">(преодоление ограничений)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Мой самый сложный день, когда я не сдался(ась) — и что было после»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 История героизма. Показывает твою силу.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я перестал(а) быть рабом своих привычек — и стал(а) хозяином жизни»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Свобода от себя старого.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 24. Путь героя -->
+                    <tr>
+                        <td class="archetype-name">
+                            24. Путь героя
+                            <span class="sub">(приключение, вызов)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Почему я взял(а) и уехал(а) / уволился(ась) / решился(ась) на авантюру»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Решительный шаг в неизвестность. Вдохновляет.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Моя история, как я пошёл(ла) в неизвестность — и не пожалел(а) ни разу»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Подтверждение правильности выбора.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 5: ИНСТИНКТЫ -->
+        <!-- ============================================================ -->
+        <div class="block instincts">
+            <div class="block-title">
+                <span class="emoji">⚡</span> ИНСТИНКТЫ
+                <span class="count">4 архетипа</span>
+            </div>
+            <div class="category-desc">
+                <strong>Зачем использовать инстинкты на 1-й ступени:</strong> Инстинкты работают на <strong>глубинном, биологическом уровне</strong>. Они не требуют логики.
+                <br><br>
+                <strong>Как использовать:</strong> Ты обращаешься к <strong>любопытству, юмору, гордости и новизне</strong>. Это эмоции, которые включаются мгновенно.
+                <br><br>
+                <strong>Важно:</strong> Эти хуки не требуют сложной истории. Они работают <strong>на интуиции</strong>.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архетип</th>
+                        <th>Хуки и объяснение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 25. Любопытство -->
+                    <tr>
+                        <td class="archetype-name">
+                            25. Любопытство (Тайна)
+                            <span class="sub">(желание узнать)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Я никогда не рассказывала эту историю. Но сегодня — расскажу»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Обещание секрета. Дофаминовая награда.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«То, о чём я молчал(а) годами. Сегодня — решаюсь сказать»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Интрига и доверие.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 26. Юмор -->
+                    <tr>
+                        <td class="archetype-name">
+                            26. Юмор / Смех
+                            <span class="sub">(снятие напряжения)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«5 признаков того, что ты эксперт, который уже всё бросил (с юмором)»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Узнавание через смех. Снимает защиту.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Честный разговор: как я чуть не слетел(а) с катушек на этой неделе»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Самоирония. Показывает твою человечность.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 27. Гордость -->
+                    <tr>
+                        <td class="archetype-name">
+                            27. Гордость
+                            <span class="sub">(доказательство себе)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Что я сделал(а), когда мне сказали, что у меня ничего не выйдет»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Ответ скептикам. Сильный мотивационный триггер.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Как я доказал(а) себе, что я способен(на) на большее — и что было дальше»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Внутренняя победа.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 28. Новизна -->
+                    <tr>
+                        <td class="archetype-name">
+                            28. Новизна
+                            <span class="sub">(свежесть, необычность)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Что я делаю, чтобы не превратиться в скучного эксперта, который всех достал»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Борьба с рутиной. Актуально для блогеров.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я постоянно ищу что-то новое — и как это меняет мою жизнь»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Жажда развития. Вдохновляет.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- БЛОК 6: СМЫСЛ -->
+        <!-- ============================================================ -->
+        <div class="block meaning">
+            <div class="block-title">
+                <span class="emoji">🔮</span> СМЫСЛ / ДУХОВНОСТЬ
+                <span class="count">3 архетипа</span>
+            </div>
+            <div class="category-desc">
+                <strong>Зачем использовать смысл на 1-й ступени:</strong> Смысл — это <strong>экзистенциальная глубина</strong>. Он обращается к зрелой части личности.
+                <br><br>
+                <strong>Как использовать:</strong> Ты говоришь о <strong>поиске, вере и истине</strong>. Это не про быстрые решения, а про <strong>жизненный путь</strong>.
+                <br><br>
+                <strong>Важно:</strong> Эти темы подходят для <strong>глубокой, думающей аудитории</strong>. Они создают <strong>долгосрочную связь</strong>.
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Архетип</th>
+                        <th>Хуки и объяснение</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 29. Поиск смысла -->
+                    <tr>
+                        <td class="archetype-name">
+                            29. Поиск смысла
+                            <span class="sub">(зачем я живу / работаю)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«День, когда я понял(а), что деньги не имеют смысла. А что тогда имеет?»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Переоценка ценностей. Глубокий экзистенциальный вопрос.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Мой честный разговор с собой: зачем я вообще всё это делаю»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Поиск своего «зачем». Двигатель сильных личностей.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 30. Вера -->
+                    <tr>
+                        <td class="archetype-name">
+                            30. Вера
+                            <span class="sub">(во что-то большее)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Во что я верю, даже если со стороны это кажется странным или наивным»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Смелость быть собой. Показывает твои истинные ценности.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Что держит меня, когда всё рушится — моя личная опора»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Внутренний стержень. Вдохновляет и даёт надежду.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <!-- 31. Аутентичность -->
+                    <tr>
+                        <td class="archetype-name">
+                            31. Аутентичность / Истина
+                            <span class="sub">(быть собой)</span>
+                        </td>
+                        <td class="hook-cell">
+                            <div class="hooks-list">
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">1</span>
+                                        <span class="hook-text">«Момент, когда я сорвал(а) маску и сказал(а) правду себе — и миру»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🔥 Снятие масок. Доверие через уязвимость.
+                                    </div>
+                                </div>
+                                <div class="single-hook">
+                                    <div>
+                                        <span class="hook-number">2</span>
+                                        <span class="hook-text">«Почему я перестал(а) быть „удобным(ой)" для всех — и стал(а) счастливее»</span>
+                                    </div>
+                                    <div class="hook-explanation">
+                                        🎯 Свобода быть собой. Главный тренд современности.
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ============================================================ -->
+        <!-- ФУТЕР -->
+        <!-- ============================================================ -->
+        <div class="footer">
+            <h3>🎯 Главный принцип 1-й ступени Лестницы Ханта</h3>
+            <p>
+                На этапе <span class="highlight">захвата внимания</span> вы <strong>не предлагаете решение</strong>.
+                Вы демонстрируете <strong>глубокое понимание</strong> боли, желания или фрустрации вашей аудитории.
+            </p>
+            <div class="rule">
+                «Я тебя понимаю. Я такая же, как ты. Я тоже через это проходила»
+            </div>
+            <p style="margin-top:14px;">
+                Решение, методология и предложение приходят <strong>только на последующих ступенях</strong> воронки.
+                <br>
+                <span class="highlight">1-я ступень</span> → узнавание и резонанс<br>
+                <span class="highlight">2-я ступень</span> → доверие и аутентичность<br>
+                <span class="highlight">3-я ступень</span> → экспертность и польза<br>
+                <span class="highlight">4-я ступень</span> → желание и оффер<br>
+                <span class="highlight">5-я ступень</span> → покупка
+            </p>
+        </div>
+    </div>
+
+    <!-- ====== FOOTER З ЛЕГАЛЬНИМИ ДОКУМЕНТАМИ ====== -->
+    <div style="margin-top:60px; padding-top:40px; border-top:2px solid #F0E2E5; text-align:center; max-width:1200px; margin-left:auto; margin-right:auto; padding-left:20px; padding-right:20px;">
+      <div style="margin-bottom:24px;">
+        <p style="font-size:0.75rem; color:#8A7A80; margin-bottom:16px; text-transform:uppercase; letter-spacing:1px;">Правова інформація</p>
+        <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center;">
+          <a href="https://irynaisakova.shop/info-services" target="_blank" style="display:inline-block; padding:8px 16px; background:#FDF1F2; color:#D4768A; text-decoration:none; border-radius:6px; font-size:0.85rem; font-weight:600; transition:all 0.2s ease; border:1px solid #D4768A;">Договір на послуги</a>
+          <a href="https://irynaisakova.shop/oferta" target="_blank" style="display:inline-block; padding:8px 16px; background:#FDF1F2; color:#D4768A; text-decoration:none; border-radius:6px; font-size:0.85rem; font-weight:600; transition:all 0.2s ease; border:1px solid #D4768A;">Публічна оферта</a>
+          <a href="https://irynaisakova.shop/privacy" target="_blank" style="display:inline-block; padding:8px 16px; background:#FDF1F2; color:#D4768A; text-decoration:none; border-radius:6px; font-size:0.85rem; font-weight:600; transition:all 0.2s ease; border:1px solid #D4768A;">Політика конфіденційності</a>
+        </div>
+      </div>
+      <div style="margin-top:20px; padding-top:20px; border-top:1px solid #F0E2E5;">
+      </div>
+    </div>
+</body>
+</html>
